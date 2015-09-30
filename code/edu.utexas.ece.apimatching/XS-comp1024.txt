@@ -1,0 +1,969 @@
+0.9.4 - 0.9.5
+domain	1431
+codomain	2054
+ruleMatch	1182
+xsMatch	1041
+++:992	%L83	%R95
++-:190	%L16
+-+:49	%R4
+UNFOUND		{com.jrefinery.chart:AbstractCategoryItemRenderer-setPlot__[CategoryPlot]->void	com.jrefinery.chart.renderer:AbstractRenderer-setPlot__[Plot]->void}
+CONFLICT	false	{com.jrefinery.chart:AbstractXYItemRenderer-setPlot__[XYPlot]->void	com.jrefinery.chart.renderer:AbstractRenderer-setPlot__[Plot]->void}
+MINE	false	{com.jrefinery.chart:AbstractXYItemRenderer-setPlot__[XYPlot]->void	com.jrefinery.chart.renderer:XYItemRenderer-setPlot__[Plot]->void}
+	P 1N 0	 Rule 19	x.parameters=[XYPlot]-> new(x).parameters=[Plot]
+	P 2N 0	 Rule 60	x.type=AbstractXYItemRenderer, new(x).type=XYItemRenderer
+	P 233N 44	 Rule 65	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+UNFOUND		{com.jrefinery.chart:CategoryPlot-getVerticalLabels__[]->boolean	com.jrefinery.chart.plot:CategoryPlot-getVerticalValueLabels__[]->boolean}
+CONFLICT	false	{com.jrefinery.chart:ChartFactory-createPieChart__[String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	com.jrefinery.chart:ChartFactory-createPieChart__[String, CategoryDataset, int, boolean, boolean, boolean]->JFreeChart}
+MINE	false	{com.jrefinery.chart:ChartFactory-createPieChart__[String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	com.jrefinery.chart:ChartFactory-createBubbleChart__[String, String, String, XYZDataset, boolean, boolean, boolean]->JFreeChart}
+	P 1N 0	 Rule 58	x.procedure=createPieChart -> new(x).procedure=createBubbleChart
+	P 1N 0	 Rule 109	x.parameters=[String, CategoryDataset, boolean, boolean, boolean]-> new(x).parameters=[String, String, String, XYZDataset, boolean, boolean, boolean]
+CONFLICT	false	{com.jrefinery.chart:HorizontalMarkerAxisBand-addMarker__[Marker]->void	com.jrefinery.chart.axis:HorizontalMarkerAxisBand-addMarker__[IntervalMarker]->void}
+MINE	true	{com.jrefinery.chart:HorizontalMarkerAxisBand-addMarker__[Marker]->void	com.jrefinery.chart.axis:HorizontalMarkerAxisBand-addMarker__[Marker]->void}
+	P 289N 54	 Rule 23	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.axis
+CONFLICT	false	{com.jrefinery.chart:JFreeChart-getTitle__[int]->AbstractTitle	com.jrefinery.chart:JFreeChart-getSubtitle__[int]->AbstractTitle}
+MINE	true	{com.jrefinery.chart:JFreeChart-getTitle__[int]->AbstractTitle	com.jrefinery.chart:JFreeChart-getTitle__[]->TextTitle}
+	P 1N 0	 Rule 57	x.return=AbstractTitle -> new(x).return=TextTitle
+	P 2N 0	 Rule 110	x.parameters= x.parameters-{[int]}
+CONFLICT	false	{com.jrefinery.chart:LineAndShapeRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	{com.jrefinery.chart:LineAndShapeRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:MinMaxCategoryRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void}
+	P 233N 44	 Rule 65	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 125	x.type=LineAndShapeRenderer, new(x).type=MinMaxCategoryRenderer
+	P 13N 6	 Rule 155	x.parameters= x.parameters-{[Shape]}
+UNFOUND		{com.jrefinery.chart:ValueAxis-ValueAxis__[String, Font, Paint, Insets, boolean, Font, Paint, Insets, boolean, Stroke, Paint, Range, boolean, Number, boolean, TickUnits, boolean, Stroke, Paint, double, boolean, double, Stroke, Paint]->void	com.jrefinery.chart.axis:ValueAxis-ValueAxis__[String, TickUnits]->void}
+CONFLICT	false	{com.jrefinery.chart:VerticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	{com.jrefinery.chart:VerticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:VerticalBarRenderer3D-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+	P 233N 44	 Rule 65	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 133	x.type=VerticalBarRenderer, new(x).type=VerticalBarRenderer3D
+	P 13N 6	 Rule 155	x.parameters= x.parameters-{[Shape]}
+CONFLICT	false	{com.jrefinery.chart:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo, Shape]->void	com.jrefinery.chart.plot:VerticalCategoryPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	true	{com.jrefinery.chart:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo, Shape]->void	com.jrefinery.chart.plot:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+	P 390N 51	 Rule 41	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.plot
+	P 13N 6	 Rule 155	x.parameters= x.parameters-{[Shape]}
+UNFOUND		{com.jrefinery.chart:VerticalStatisticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+CONFLICT	false	{com.jrefinery.chart:XYPlot-addAnnotation__[Annotation]->void	com.jrefinery.chart.plot:XYPlot-addAnnotation__[XYAnnotation]->void}
+MINE	true	{com.jrefinery.chart:XYPlot-addAnnotation__[Annotation]->void	com.jrefinery.chart.plot:XYPlot-addAnnotation__[Annotation]->void}
+	P 390N 51	 Rule 41	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.plot
+UNFOUND		{com.jrefinery.chart:XYPlot-getParent__[]->Plot	com.jrefinery.chart.plot:Plot-getParent__[]->Plot}
+UNFOUND		{com.jrefinery.chart:XYPlot-setParent__[XYPlot]->void	com.jrefinery.chart.plot:Plot-setParent__[Plot]->void}
+UNFOUND		{com.jrefinery.chart.demo:ChartTiming1-setFinished__[boolean]->void	com.jrefinery.chart.demo:ChartTiming1-actionPerformed__[ActionEvent]->void}
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-add__[TimePeriod, Number]->void	com.jrefinery.data:TimeSeries-add__[RegularTimePeriod, Number]->void}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-add__[TimePeriod, Number]->void	com.jrefinery.data:TimeSeries-add__[TimePeriod, Number]->void}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-add__[TimePeriod, double]->void	com.jrefinery.data:TimeSeries-add__[RegularTimePeriod, double]->void}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-add__[TimePeriod, double]->void	com.jrefinery.data:TimeSeries-add__[TimePeriod, double]->void}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-addOrUpdate__[TimePeriod, Number]->TimeSeriesDataPair	com.jrefinery.data:TimeSeries-addOrUpdate__[RegularTimePeriod, Number]->TimeSeriesDataPair}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-addOrUpdate__[TimePeriod, Number]->TimeSeriesDataPair	com.jrefinery.data:TimeSeries-addOrUpdate__[TimePeriod, Number]->TimeSeriesDataPair}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-delete__[TimePeriod]->void	com.jrefinery.data:TimeSeries-delete__[RegularTimePeriod]->void}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-delete__[TimePeriod]->void	com.jrefinery.data:TimeSeries-delete__[TimePeriod]->void}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-getDataPair__[TimePeriod]->TimeSeriesDataPair	com.jrefinery.data:TimeSeries-getDataPair__[RegularTimePeriod]->TimeSeriesDataPair}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-getDataPair__[TimePeriod]->TimeSeriesDataPair	com.jrefinery.data:TimeSeries-getDataPair__[TimePeriod]->TimeSeriesDataPair}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-getIndex__[TimePeriod]->int	com.jrefinery.data:TimeSeries-getIndex__[RegularTimePeriod]->int}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-getIndex__[TimePeriod]->int	com.jrefinery.data:TimeSeries-getIndex__[TimePeriod]->int}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-getValue__[TimePeriod]->Number	com.jrefinery.data:TimeSeries-getValue__[RegularTimePeriod]->Number}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-getValue__[TimePeriod]->Number	com.jrefinery.data:TimeSeries-getValue__[TimePeriod]->Number}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:BasicTimeSeries-update__[TimePeriod, Number]->void	com.jrefinery.data:TimeSeries-update__[RegularTimePeriod, Number]->void}
+MINE	true	{com.jrefinery.data:BasicTimeSeries-update__[TimePeriod, Number]->void	com.jrefinery.data:TimeSeries-update__[TimePeriod, Number]->void}
+	P 39N 0	 Rule 15	x.type=BasicTimeSeries, new(x).type=TimeSeries
+CONFLICT	false	{com.jrefinery.data:DatasetUtilities-createPieDataset__[CategoryDataset, Object]->PieDataset	com.jrefinery.data:DatasetUtilities-createPieDatasetForColumn__[CategoryDataset, Comparable]->PieDataset}
+MINE	true	{com.jrefinery.data:DatasetUtilities-createPieDataset__[CategoryDataset, Object]->PieDataset	com.jrefinery.data:DatasetUtilities-createPieDatasetForRow__[CategoryDataset, Comparable]->PieDataset}
+	P 2N 0	 Rule 26	x.procedure=createPieDataset -> new(x).procedure=createPieDatasetForRow
+	P 1N 0	 Rule 37	x.parameters=[CategoryDataset, Object]-> new(x).parameters=[CategoryDataset, Comparable]
+UNFOUND		{com.jrefinery.data:DefaultCategoryDataset-DefaultCategoryDataset__[String[], Object[], Number[][]]->void	com.jrefinery.data:DefaultCategoryDataset-DefaultCategoryDataset__[]->void}
+CONFLICT	false	{com.jrefinery.data:DefaultCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultCategoryDataset-getColumnKeys__[]->List}
+MINE	false	{com.jrefinery.data:DefaultCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategories__[]->List}
+	P 7N 8	 Rule 149	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultCategoryDataset-getColumnCount__[]->int}
+MINE	true	{com.jrefinery.data:DefaultCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultCategoryDataset-getRowCount__[]->int}
+	P 4N 2	 Rule 4	x.procedure=getCategoryCount -> new(x).procedure=getRowCount
+	P 7N 8	 Rule 149	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultCategoryDataset-getRowCount__[]->int}
+MINE	false	{com.jrefinery.data:DefaultCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getSeriesCount__[]->int}
+	P 7N 8	 Rule 149	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultCategoryDataset-setValue__[int, Object, Number]->void	com.jrefinery.data:DefaultCategoryDataset-setValue__[double, Comparable, Comparable]->void}
+MINE	true	{com.jrefinery.data:DefaultCategoryDataset-setValue__[int, Object, Number]->void	com.jrefinery.data:DefaultCategoryDataset-setValue__[Number, Comparable, Comparable]->void}
+	P 1N 0	 Rule 49	x.parameters=[int, Object, Number]-> new(x).parameters=[Number, Comparable, Comparable]
+	P 7N 8	 Rule 149	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+UNFOUND		{com.jrefinery.data:DefaultIntervalCategoryDataset-setCategories__[Object[]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-setCategoryKeys__[Comparable[]]->void}
+CONFLICT	false	{com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesNames__[String[]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesKeys__[Comparable[]]->void}
+MINE	false	{com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesNames__[String[]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-setCategoryKeys__[Comparable[]]->void}
+	P 1N 0	 Rule 95	x.procedure=setSeriesNames -> new(x).procedure=setCategoryKeys
+	P 1N 0	 Rule 157	x.arg=String[]-> new(x).arg=Comparable[]
+CONFLICT	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultStatisticalCategoryDataset-getColumnKeys__[]->List}
+MINE	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategories__[]->List}
+	P 5N 3	 Rule 77	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultStatisticalCategoryDataset-getColumnCount__[]->int}
+MINE	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategoryCount__[]->int}
+	P 4N 2	 Rule 4	x.procedure=getCategoryCount -> new(x).procedure=getRowCount
+	P 5N 3	 Rule 77	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultStatisticalCategoryDataset-getRowCount__[]->int}
+MINE	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getSeriesCount__[]->int}
+	P 5N 3	 Rule 77	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getStdDevValue__[int, Object]->Number	com.jrefinery.data:DefaultStatisticalCategoryDataset-getStdDevValue__[Comparable, Comparable]->Number}
+MINE	true	{com.jrefinery.data:DefaultStatisticalCategoryDataset-getStdDevValue__[int, Object]->Number	com.jrefinery.data:DefaultStatisticalCategoryDataset-getStdDevValue__[int, int]->Number}
+	P 5N 3	 Rule 77	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+	P 14N 1	 Rule 134	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+UNFOUND		{com.jrefinery.data:GanttSeries-add__[Object, TimeAllocation]->void	com.jrefinery.data:TaskSeries-add__[Task]->void}
+UNFOUND		{com.jrefinery.data:GanttSeriesCollection-getCategories__[]->List	com.jrefinery.data:TaskSeriesCollection-getColumnKeys__[]->List}
+CONFLICT	false	{com.jrefinery.data:GanttSeriesCollection-getCategoryCount__[]->int	com.jrefinery.data:TaskSeriesCollection-getColumnCount__[]->int}
+MINE	true	{com.jrefinery.data:GanttSeriesCollection-getCategoryCount__[]->int	com.jrefinery.data:TaskSeriesCollection-getRowCount__[]->int}
+	P 4N 2	 Rule 4	x.procedure=getCategoryCount -> new(x).procedure=getRowCount
+	P 8N 1	 Rule 106	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+CONFLICT	false	{com.jrefinery.data:GanttSeriesCollection-getEndValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getEndValue__[int, int, int]->Number}
+MINE	true	{com.jrefinery.data:GanttSeriesCollection-getEndValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getEndValue__[int, int]->Number}
+	P 8N 1	 Rule 106	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 14N 1	 Rule 134	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	false	{com.jrefinery.data:GanttSeriesCollection-getStartValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getStartValue__[Comparable, Comparable]->Number}
+MINE	true	{com.jrefinery.data:GanttSeriesCollection-getStartValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getStartValue__[int, int]->Number}
+	P 8N 1	 Rule 106	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 14N 1	 Rule 134	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	false	{com.jrefinery.data:GanttSeriesCollection-getValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getValue__[Comparable, Comparable]->Number}
+MINE	true	{com.jrefinery.data:GanttSeriesCollection-getValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getValue__[int, int]->Number}
+	P 8N 1	 Rule 106	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 14N 1	 Rule 134	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	false	{com.jrefinery.data:StatisticalCategoryDataset-getStdDevValue__[int, Object]->Number	com.jrefinery.data:StatisticalCategoryDataset-getStdDevValue__[Comparable, Comparable]->Number}
+MINE	true	{com.jrefinery.data:StatisticalCategoryDataset-getStdDevValue__[int, Object]->Number	com.jrefinery.data:StatisticalCategoryDataset-getStdDevValue__[int, int]->Number}
+	P 14N 1	 Rule 134	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+UNFOUND		{com.jrefinery.data:TimeAllocation-TimeAllocation__[Date, Date]->void	com.jrefinery.data:SimpleTimePeriod-SimpleTimePeriod__[Date, Date]->void}
+CONFLICT	false	{com.jrefinery.data:TimeAllocation-getEnd__[]->Date	com.jrefinery.data:SimpleTimePeriod-getEnd__[]->Date}
+MINE	false	{com.jrefinery.data:TimeAllocation-getEnd__[]->Date	com.jrefinery.data:TimePeriod-getEnd__[]->Date}
+	P 2N 0	 Rule 11	x.type=TimeAllocation, new(x).type=TimePeriod
+CONFLICT	false	{com.jrefinery.data:TimeAllocation-getStart__[]->Date	com.jrefinery.data:SimpleTimePeriod-getStart__[]->Date}
+MINE	false	{com.jrefinery.data:TimeAllocation-getStart__[]->Date	com.jrefinery.data:TimePeriod-getStart__[]->Date}
+	P 2N 0	 Rule 11	x.type=TimeAllocation, new(x).type=TimePeriod
+UNFOUND		{com.jrefinery.data:TimePeriod-getEnd__[Calendar]->long	com.jrefinery.data:RegularTimePeriod-getLastMillisecond__[Calendar]->long}
+CONFLICT	false	{com.jrefinery.data:TimePeriod-getEnd__[TimeZone]->long	com.jrefinery.data:RegularTimePeriod-getLastMillisecond__[]->long}
+MINE	false	{com.jrefinery.data:TimePeriod-getEnd__[TimeZone]->long	com.jrefinery.data:SimpleTimePeriod-getEnd__[]->Date}
+	P 2N 1	 Rule 2	x.parameters= x.parameters-{[TimeZone]}
+	P 3N 7	 Rule 46	x.type=TimePeriod, new(x).type=SimpleTimePeriod
+	P 12N 3	 Rule 92	x.procedure=getEnd -> new(x).procedure=getLastMillisecond
+	P 4N 6	 Rule 152	x.return=long -> new(x).return=Date
+UNFOUND		{com.jrefinery.data:TimePeriod-getStart__[Calendar]->long	com.jrefinery.data:RegularTimePeriod-getFirstMillisecond__[Calendar]->long}
+CONFLICT	false	{com.jrefinery.data:TimePeriod-getStart__[TimeZone]->long	com.jrefinery.data:RegularTimePeriod-getFirstMillisecond__[TimeZone]->long}
+MINE	false	{com.jrefinery.data:TimePeriod-getStart__[TimeZone]->long	com.jrefinery.data:SimpleTimePeriod-getStart__[]->Date}
+	P 2N 1	 Rule 2	x.parameters= x.parameters-{[TimeZone]}
+	P 3N 7	 Rule 46	x.type=TimePeriod, new(x).type=SimpleTimePeriod
+	P 12N 3	 Rule 130	x.procedure=getStart -> new(x).procedure=getFirstMillisecond
+	P 4N 6	 Rule 152	x.return=long -> new(x).return=Date
+conflict_true:	22
+conflict_false:	13
+unfound:	14
+rename	256
+move	88
+param	669
+rename_package	0
+rename_class	10
+rename_interface	0
+rename_method	213
+rename_constructor	33
+rename_field	0
+move_class	67
+move_interface	3
+move_method	18
+move_field	0
+param_change_identifier	118
+param_renameormove_paramtype	90
+param_remove_parameter	203
+param_add_parameter	233
+param_change_paramtype	25
+0.9.5 - 0.9.6
+domain	449
+codomain	39
+ruleMatch	4
+xsMatch	2
+++:2	%L50	%R100
++-:2	%L50
+-+:0	%R0
+conflict_true:	0
+conflict_false:	0
+unfound:	0
+rename	2
+move	0
+param	2
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	1
+rename_constructor	1
+rename_field	0
+move_class	0
+move_interface	0
+move_method	0
+move_field	0
+param_change_identifier	1
+param_renameormove_paramtype	0
+param_remove_parameter	1
+param_add_parameter	0
+param_change_paramtype	0
+0.9.6 - 0.9.7
+domain	322
+codomain	1262
+ruleMatch	267
+xsMatch	259
+++:254	%L95	%R98
++-:13	%L4
+-+:5	%R1
+CONFLICT	false	{com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[Shape, String, Object, int]->void	com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[int, int, Comparable, Shape, String, String]->void}
+MINE	true	{com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[Shape, String, Object, int]->void	com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[int, int, Comparable, Shape, String]->void}
+	P 1N 0	 Rule 3	x.parameters=[Shape, String, Object, int]-> new(x).parameters=[int, int, Comparable, Shape, String]
+CONFLICT	false	{com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[Shape, String, String, Object, int]->void	com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[int, int, Comparable, Shape, String]->void}
+MINE	true	{com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[Shape, String, String, Object, int]->void	com.jrefinery.chart.entity:PieSectionEntity-PieSectionEntity__[int, int, Comparable, Shape, String, String]->void}
+	P 1N 0	 Rule 14	x.parameters=[Shape, String, String, Object, int]-> new(x).parameters=[int, int, Comparable, Shape, String, String]
+CONFLICT	false	{com.jrefinery.chart.entity:PieSectionEntity-getCategoryIndex__[]->int	com.jrefinery.chart.entity:PieSectionEntity-getSectionIndex__[]->int}
+MINE	true	{com.jrefinery.chart.entity:PieSectionEntity-getCategoryIndex__[]->int	com.jrefinery.chart.entity:PieSectionEntity-getPieIndex__[]->int}
+	P 1N 0	 Rule 16	x.procedure=getCategoryIndex -> new(x).procedure=getPieIndex
+CONFLICT	false	{com.jrefinery.chart.entity:PieSectionEntity-setCategory__[Object]->void	com.jrefinery.chart.entity:PieSectionEntity-setSectionKey__[Comparable]->void}
+MINE	false	{com.jrefinery.chart.entity:PieSectionEntity-setCategory__[Object]->void	com.jrefinery.chart.entity:PieSectionEntity-setPieIndex__[int]->void}
+	P 1N 0	 Rule 4	x.procedure=setCategory -> new(x).procedure=setPieIndex
+	P 1N 0	 Rule 23	x.parameters=[Object]-> new(x).parameters=[int]
+CONFLICT	false	{com.jrefinery.chart.entity:PieSectionEntity-setCategoryIndex__[int]->void	com.jrefinery.chart.entity:PieSectionEntity-setPieIndex__[int]->void}
+MINE	true	{com.jrefinery.chart.entity:PieSectionEntity-setCategoryIndex__[int]->void	com.jrefinery.chart.entity:PieSectionEntity-setSectionIndex__[int]->void}
+	P 1N 0	 Rule 0	x.procedure=setCategoryIndex -> new(x).procedure=setSectionIndex
+conflict_true:	4
+conflict_false:	1
+unfound:	0
+rename	47
+move	41
+param	72
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	40
+rename_constructor	7
+rename_field	0
+move_class	14
+move_interface	0
+move_method	27
+move_field	0
+param_change_identifier	5
+param_renameormove_paramtype	0
+param_remove_parameter	10
+param_add_parameter	24
+param_change_paramtype	33
+0.9.7 - 0.9.8
+domain	4076
+codomain	4139
+ruleMatch	4043
+xsMatch	4073
+++:4043	%L100	%R99
++-:0	%L0
+-+:30	%R0
+UNFOUND		{com.jrefinery.chart.plot:PiePlot-PiePlot__[KeyedValuesDataset]->void	org.jfree.chart.plot:PiePlot-PiePlot__[PieDataset]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-addValue__[Number, Comparable, Comparable]->void	org.jfree.data:DefaultCategoryDataset-addValue__[Number, Comparable, Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-addValue__[double, Comparable, Comparable]->void	org.jfree.data:DefaultCategoryDataset-addValue__[double, Comparable, Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-equals__[Object]->boolean	org.jfree.data:DefaultCategoryDataset-equals__[Object]->boolean}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getColumnCount__[]->int	org.jfree.data:DefaultCategoryDataset-getColumnCount__[]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getColumnIndex__[Comparable]->int	org.jfree.data:DefaultCategoryDataset-getColumnIndex__[Comparable]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getColumnKey__[int]->Comparable	org.jfree.data:DefaultCategoryDataset-getColumnKey__[int]->Comparable}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getColumnKeys__[]->List	org.jfree.data:DefaultCategoryDataset-getColumnKeys__[]->List}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getRowCount__[]->int	org.jfree.data:DefaultCategoryDataset-getRowCount__[]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getRowIndex__[Comparable]->int	org.jfree.data:DefaultCategoryDataset-getRowIndex__[Comparable]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getRowKey__[int]->Comparable	org.jfree.data:DefaultCategoryDataset-getRowKey__[int]->Comparable}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getRowKeys__[]->List	org.jfree.data:DefaultCategoryDataset-getRowKeys__[]->List}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getValue__[Comparable, Comparable]->Number	org.jfree.data:DefaultCategoryDataset-getValue__[Comparable, Comparable]->Number}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-getValue__[int, int]->Number	org.jfree.data:DefaultCategoryDataset-getValue__[int, int]->Number}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-removeColumn__[Comparable]->void	org.jfree.data:DefaultCategoryDataset-removeColumn__[Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-removeColumn__[int]->void	org.jfree.data:DefaultCategoryDataset-removeColumn__[int]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-removeRow__[Comparable]->void	org.jfree.data:DefaultCategoryDataset-removeRow__[Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-removeRow__[int]->void	org.jfree.data:DefaultCategoryDataset-removeRow__[int]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-removeValue__[Comparable, Comparable]->void	org.jfree.data:DefaultCategoryDataset-removeValue__[Comparable, Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-setValue__[Number, Comparable, Comparable]->void	org.jfree.data:DefaultCategoryDataset-setValue__[Number, Comparable, Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValues2DDataset-setValue__[double, Comparable, Comparable]->void	org.jfree.data:DefaultCategoryDataset-setValue__[double, Comparable, Comparable]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-equals__[Object]->boolean	org.jfree.data:DefaultPieDataset-equals__[Object]->boolean}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getIndex__[Comparable]->int	org.jfree.data:DefaultPieDataset-getIndex__[Comparable]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getItemCount__[]->int	org.jfree.data:DefaultPieDataset-getItemCount__[]->int}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getKey__[int]->Comparable	org.jfree.data:DefaultPieDataset-getKey__[int]->Comparable}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getKeys__[]->List	org.jfree.data:DefaultPieDataset-getKeys__[]->List}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getValue__[Comparable]->Number	org.jfree.data:DefaultPieDataset-getValue__[Comparable]->Number}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-getValue__[int]->Number	org.jfree.data:DefaultPieDataset-getValue__[int]->Number}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-setValue__[Comparable, Number]->void	org.jfree.data:DefaultPieDataset-setValue__[Comparable, Number]->void}
+UNFOUND		{com.jrefinery.data:DefaultKeyedValuesDataset-setValue__[Comparable, double]->void	org.jfree.data:DefaultPieDataset-setValue__[Comparable, double]->void}
+conflict_true:	0
+conflict_false:	0
+unfound:	30
+rename	52
+move	29
+param	25
+rename_package	27
+rename_class	0
+rename_interface	0
+rename_method	23
+rename_constructor	2
+rename_field	0
+move_class	0
+move_interface	0
+move_method	29
+move_field	0
+param_change_identifier	0
+param_renameormove_paramtype	0
+param_remove_parameter	0
+param_add_parameter	0
+param_change_paramtype	25
+0.9.8 - 0.9.9
+domain	792
+codomain	1129
+ruleMatch	558
+xsMatch	445
+++:312	%L55	%R70
++-:246	%L44
+-+:133	%R29
+UNFOUND		{org.jfree.chart:ChartFactory-createAreaChart__[String, String, String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	org.jfree.chart:ChartFactory-createAreaChart__[String, String, String, CategoryDataset, PlotOrientation, boolean, boolean, boolean]->JFreeChart}
+UNFOUND		{org.jfree.chart:ChartFactory-createLineChart__[String, String, String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	org.jfree.chart:ChartFactory-createLineChart__[String, String, String, CategoryDataset, PlotOrientation, boolean, boolean, boolean]->JFreeChart}
+UNFOUND		{org.jfree.chart:ChartFactory-createStackedAreaChart__[String, String, String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	org.jfree.chart:ChartFactory-createStackedAreaChart__[String, String, String, CategoryDataset, PlotOrientation, boolean, boolean, boolean]->JFreeChart}
+UNFOUND		{org.jfree.chart:ChartFactory-createStackedHorizontalBarChart__[String, String, String, CategoryDataset, boolean, boolean, boolean]->JFreeChart	org.jfree.chart:ChartFactory-createStackedBarChart__[String, String, String, CategoryDataset, PlotOrientation, boolean, boolean, boolean]->JFreeChart}
+UNFOUND		{org.jfree.chart:ChartFactory-createVerticalXYBarChart__[String, String, String, IntervalXYDataset, boolean, boolean, boolean]->JFreeChart	org.jfree.chart:ChartFactory-createXYBarChart__[String, String, String, IntervalXYDataset, PlotOrientation, boolean, boolean, boolean]->JFreeChart}
+UNFOUND		{org.jfree.chart.axis:DateAxis-setTickMarksAtStartOfUnit__[boolean]->void	org.jfree.chart.axis:DateAxis-setTickMarkPosition__[DateTickMarkPosition]->void}
+UNFOUND		{org.jfree.chart.axis:HorizontalColorBarAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:ColorBar-draw__[Graphics2D, Rectangle2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+CONFLICT	false	{org.jfree.chart.axis:HorizontalColorBarAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double	org.jfree.chart.axis:NumberAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double}
+MINE	false	{org.jfree.chart.axis:HorizontalColorBarAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double	org.jfree.chart.axis:DateAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double}
+	P 6N 8	 Rule 38	x.type=HorizontalColorBarAxis, new(x).type=ColorBar
+	P 2N 0	 Rule 134	x.type=HorizontalColorBarAxis, new(x).type=DateAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalColorBarAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+MINE	false	{org.jfree.chart.axis:HorizontalColorBarAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:DateAxis-isCompatiblePlot__[Plot]->boolean}
+	P 6N 8	 Rule 38	x.type=HorizontalColorBarAxis, new(x).type=ColorBar
+	P 2N 0	 Rule 134	x.type=HorizontalColorBarAxis, new(x).type=DateAxis
+UNFOUND		{org.jfree.chart.axis:HorizontalColorBarAxis-setMaximumAxisValue__[double]->void	org.jfree.chart.axis:ColorBar-setMaximumValue__[double]->void}
+UNFOUND		{org.jfree.chart.axis:HorizontalColorBarAxis-setMinimumAxisValue__[double]->void	org.jfree.chart.axis:ColorBar-setMinimumValue__[double]->void}
+CONFLICT	false	{org.jfree.chart.axis:HorizontalLogarithmicAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalLogarithmicAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:LogarithmicAxis-autoAdjustRange__[]->void}
+	P 13N 0	 Rule 165	x.type=HorizontalLogarithmicAxis, new(x).type=LogarithmicAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalLogarithmicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalLogarithmicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:LogarithmicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+	P 13N 0	 Rule 165	x.type=HorizontalLogarithmicAxis, new(x).type=LogarithmicAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalLogarithmicAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:NumberAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+MINE	true	{org.jfree.chart.axis:HorizontalLogarithmicAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:LogarithmicAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+	P 18N 0	 Rule 20	new(x).parameters = x.parameters+[AxisLocation]
+	P 13N 0	 Rule 165	x.type=HorizontalLogarithmicAxis, new(x).type=LogarithmicAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalLogarithmicAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:NumberAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+MINE	true	{org.jfree.chart.axis:HorizontalLogarithmicAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:LogarithmicAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+	P 18N 0	 Rule 20	new(x).parameters = x.parameters+[AxisLocation]
+	P 13N 0	 Rule 165	x.type=HorizontalLogarithmicAxis, new(x).type=LogarithmicAxis
+UNFOUND		{org.jfree.chart.axis:HorizontalLogarithmicColorBarAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+UNFOUND		{org.jfree.chart.axis:HorizontalLogarithmicColorBarAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+UNFOUND		{org.jfree.chart.axis:HorizontalLogarithmicColorBarAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double	org.jfree.chart.axis:NumberAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double}
+UNFOUND		{org.jfree.chart.axis:HorizontalLogarithmicColorBarAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+CONFLICT	false	{org.jfree.chart.axis:HorizontalMarkerAxisBand-HorizontalMarkerAxisBand__[HorizontalNumberAxis, double, double, double, double, Font]->void	org.jfree.chart.axis:MarkerAxisBand-MarkerAxisBand__[NumberAxis, double, double, double, double, Font]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalMarkerAxisBand-HorizontalMarkerAxisBand__[HorizontalNumberAxis, double, double, double, double, Font]->void	org.jfree.chart.axis:MarkerAxisBand-MarkerAxisBand__[HorizontalNumberAxis, double, double, double, double, Font]->void}
+	P 6N 0	 Rule 31	x.type=HorizontalMarkerAxisBand, new(x).type=MarkerAxisBand
+CONFLICT	false	{org.jfree.chart.axis:HorizontalNumberAxis-setMarkerBand__[HorizontalMarkerAxisBand]->void	org.jfree.chart.axis:NumberAxis-setMarkerBand__[MarkerAxisBand]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalNumberAxis-setMarkerBand__[HorizontalMarkerAxisBand]->void	org.jfree.chart.axis:NumberAxis-setMarkerBand__[HorizontalMarkerAxisBand]->void}
+	P 15N 2	 Rule 93	x.type=HorizontalNumberAxis, new(x).type=NumberAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalNumberAxis3D-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalNumberAxis3D-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis3D-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+	P 2N 0	 Rule 111	x.type=HorizontalNumberAxis3D, new(x).type=NumberAxis3D
+UNFOUND		{org.jfree.chart.axis:HorizontalNumberAxis3D-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double	org.jfree.chart.axis:NumberAxis-getMaxTickLabelHeight__[Graphics2D, Rectangle2D, boolean]->double}
+UNFOUND		{org.jfree.chart.axis:HorizontalNumberAxis3D-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+CONFLICT	false	{org.jfree.chart.axis:HorizontalSymbolicAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalSymbolicAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:SymbolicAxis-autoAdjustRange__[]->void}
+	P 14N 0	 Rule 28	x.type=HorizontalSymbolicAxis, new(x).type=SymbolicAxis
+CONFLICT	false	{org.jfree.chart.axis:HorizontalSymbolicAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalSymbolicAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:SymbolicAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 14N 0	 Rule 28	x.type=HorizontalSymbolicAxis, new(x).type=SymbolicAxis
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+CONFLICT	false	{org.jfree.chart.axis:HorizontalSymbolicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:HorizontalSymbolicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:SymbolicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 14N 0	 Rule 28	x.type=HorizontalSymbolicAxis, new(x).type=SymbolicAxis
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+CONFLICT	false	{org.jfree.chart.axis:ValueAxis-setRangeAttribute__[Range]->void	org.jfree.chart.axis:ValueAxis-setRange__[Range, boolean, boolean]->void}
+MINE	true	{org.jfree.chart.axis:ValueAxis-setRangeAttribute__[Range]->void	org.jfree.chart.axis:ValueAxis-setRange__[Range]->void}
+	P 1N 0	 Rule 61	x.procedure=setRangeAttribute -> new(x).procedure=setRange
+UNFOUND		{org.jfree.chart.axis:ValueAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:ValueAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:ValueAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:ValueAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalCategoryAxis-configure__[]->void	org.jfree.chart.axis:CategoryAxis-configure__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalCategoryAxis-getCategoryEnd__[int, int, Rectangle2D]->double	org.jfree.chart.axis:CategoryAxis-getCategoryEnd__[int, int, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalCategoryAxis-getCategoryMiddle__[int, int, Rectangle2D]->double	org.jfree.chart.axis:CategoryAxis-getCategoryMiddle__[int, int, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalCategoryAxis-getCategoryStart__[int, int, Rectangle2D]->double	org.jfree.chart.axis:CategoryAxis-getCategoryStart__[int, int, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalCategoryAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:CategoryAxis-isCompatiblePlot__[Plot]->boolean}
+UNFOUND		{org.jfree.chart.axis:VerticalColorBarAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+CONFLICT	false	{org.jfree.chart.axis:VerticalColorBarAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	false	{org.jfree.chart.axis:VerticalColorBarAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:CategoryAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 2N 0	 Rule 25	x.type=VerticalColorBarAxis, new(x).type=CategoryAxis
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+UNFOUND		{org.jfree.chart.axis:VerticalColorBarAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+CONFLICT	false	{org.jfree.chart.axis:VerticalColorBarAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	false	{org.jfree.chart.axis:VerticalColorBarAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:CategoryAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 2N 0	 Rule 25	x.type=VerticalColorBarAxis, new(x).type=CategoryAxis
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:DateAxis-autoAdjustRange__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-configure__[]->void	org.jfree.chart.axis:DateAxis-configure__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:DateAxis-isCompatiblePlot__[Plot]->boolean}
+CONFLICT	true	{org.jfree.chart.axis:VerticalDateAxis-selectAutoTickUnit__[Graphics2D, Rectangle2D, Rectangle2D]->void	org.jfree.chart.axis:DateAxis-selectAutoTickUnit__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	false	{org.jfree.chart.axis:VerticalDateAxis-selectAutoTickUnit__[Graphics2D, Rectangle2D, Rectangle2D]->void	org.jfree.chart.axis:DateAxis-selectHorizontalAutoTickUnit__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 18N 0	 Rule 20	new(x).parameters = x.parameters+[AxisLocation]
+	P 1N 0	 Rule 91	x.procedure=selectAutoTickUnit -> new(x).procedure=selectHorizontalAutoTickUnit
+	P 3N 0	 Rule 180	x.type=VerticalDateAxis, new(x).type=DateAxis
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-translateDateToJava2D__[Date, Rectangle2D]->double	org.jfree.chart.axis:DateAxis-translateDateToJava2D__[Date, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:DateAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalDateAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:DateAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+CONFLICT	false	{org.jfree.chart.axis:VerticalLogarithmicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:LogarithmicAxis-refreshTicksVertical__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:VerticalLogarithmicAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:LogarithmicAxis-refreshTicksHorizontal__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 13N 2	 Rule 29	x.type=VerticalLogarithmicAxis, new(x).type=LogarithmicAxis
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+	P 1N 0	 Rule 171	x.procedure=refreshTicks -> new(x).procedure=refreshTicksHorizontal
+UNFOUND		{org.jfree.chart.axis:VerticalLogarithmicAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:LogarithmicAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalLogarithmicAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:LogarithmicAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalLogarithmicColorBarAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalLogarithmicColorBarAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalLogarithmicColorBarAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+CONFLICT	false	{org.jfree.chart.axis:VerticalLogarithmicColorBarAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	false	{org.jfree.chart.axis:VerticalLogarithmicColorBarAxis-refreshTicks__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:LogarithmicAxis-refreshTicksVertical__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+	P 25N 4	 Rule 33	x.parameters=[Graphics2D, Rectangle2D, Rectangle2D, int]-> new(x).parameters=[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]
+	P 1N 0	 Rule 92	x.procedure=refreshTicks -> new(x).procedure=refreshTicksVertical
+	P 1N 0	 Rule 150	x.type=VerticalLogarithmicColorBarAxis, new(x).type=LogarithmicAxis
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis-autoAdjustRange__[]->void	org.jfree.chart.axis:NumberAxis-autoAdjustRange__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis-configure__[]->void	org.jfree.chart.axis:NumberAxis-configure__[]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis-isCompatiblePlot__[Plot]->boolean	org.jfree.chart.axis:NumberAxis-isCompatiblePlot__[Plot]->boolean}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis-translateJava2DtoValue__[float, Rectangle2D]->double	org.jfree.chart.axis:NumberAxis-translateJava2DtoValue__[float, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis-translateValueToJava2D__[double, Rectangle2D]->double	org.jfree.chart.axis:NumberAxis-translateValueToJava2D__[double, Rectangle2D, AxisLocation]->double}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis3D-VerticalNumberAxis3D__[String]->void	org.jfree.chart.axis:NumberAxis3D-NumberAxis3D__[String]->void}
+UNFOUND		{org.jfree.chart.axis:VerticalNumberAxis3D-draw__[Graphics2D, Rectangle2D, Rectangle2D, int]->void	org.jfree.chart.axis:NumberAxis3D-draw__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+CONFLICT	false	{org.jfree.chart.axis:VerticalSymbolicAxis-drawSymbolicGridLines__[Graphics2D, Rectangle2D, Rectangle2D]->void	org.jfree.chart.axis:SymbolicAxis-drawSymbolicGridLines__[Graphics2D, Rectangle2D, Rectangle2D, AxisLocation]->void}
+MINE	true	{org.jfree.chart.axis:VerticalSymbolicAxis-drawSymbolicGridLines__[Graphics2D, Rectangle2D, Rectangle2D]->void	org.jfree.chart.axis:SymbolicAxis-drawSymbolicGridLinesVertical__[Graphics2D, Rectangle2D, Rectangle2D, boolean]->void}
+	P 14N 0	 Rule 53	x.type=VerticalSymbolicAxis, new(x).type=SymbolicAxis
+	P 1N 0	 Rule 128	new(x).parameters = x.parameters+[boolean]
+	P 2N 0	 Rule 186	x.procedure=drawSymbolicGridLines -> new(x).procedure=drawSymbolicGridLinesVertical
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-VerticalCategoryAxisTests__[String]->void	org.jfree.chart.axis.junit:CategoryAxisTests-CategoryAxisTests__[String]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-VerticalCategoryAxisTests__[String]->void	org.jfree.chart.axis.junit:AxisLocationTests-AxisLocationTests__[String]->void}
+	P 3N 0	 Rule 11	x.type=VerticalCategoryAxisTests, new(x).type=AxisLocationTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:CategoryAxisTests-suite__[]->Test}
+MINE	true	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:AxisLocationTests-suite__[]->Test}
+	P 3N 0	 Rule 11	x.type=VerticalCategoryAxisTests, new(x).type=AxisLocationTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:CategoryAxisTests-testSerialization__[]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalCategoryAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:AxisLocationTests-testSerialization__[]->void}
+	P 3N 0	 Rule 11	x.type=VerticalCategoryAxisTests, new(x).type=AxisLocationTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-VerticalLogarithmicAxisTests__[String]->void	org.jfree.chart.axis.junit:LogarithmicAxisTests-LogarithmicAxisTests__[String]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-VerticalLogarithmicAxisTests__[String]->void	org.jfree.chart.axis.junit:AxisLocationTests-AxisLocationTests__[String]->void}
+	P 3N 0	 Rule 47	x.type=VerticalLogarithmicAxisTests, new(x).type=AxisLocationTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:LogarithmicAxisTests-suite__[]->Test}
+MINE	true	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:AxisLocationTests-suite__[]->Test}
+	P 3N 0	 Rule 47	x.type=VerticalLogarithmicAxisTests, new(x).type=AxisLocationTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:LogarithmicAxisTests-testSerialization__[]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalLogarithmicAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:AxisLocationTests-testSerialization__[]->void}
+	P 3N 0	 Rule 47	x.type=VerticalLogarithmicAxisTests, new(x).type=AxisLocationTests
+UNFOUND		{org.jfree.chart.axis.junit:VerticalNumberAxis3DTests-VerticalNumberAxis3DTests__[String]->void	org.jfree.chart.axis.junit:NumberAxis3DTests-NumberAxis3DTests__[String]->void}
+UNFOUND		{org.jfree.chart.axis.junit:VerticalNumberAxis3DTests-suite__[]->Test	org.jfree.chart.axis.junit:NumberAxis3DTests-suite__[]->Test}
+UNFOUND		{org.jfree.chart.axis.junit:VerticalNumberAxis3DTests-testSerialization__[]->void	org.jfree.chart.axis.junit:NumberAxis3DTests-testSerialization__[]->void}
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-VerticalNumberAxisTests__[String]->void	org.jfree.chart.axis.junit:NumberAxisTests-NumberAxisTests__[String]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-VerticalNumberAxisTests__[String]->void	org.jfree.chart.axis.junit:SegmentedTimelineTests-SegmentedTimelineTests__[String]->void}
+	P 3N 0	 Rule 185	x.type=VerticalNumberAxisTests, new(x).type=SegmentedTimelineTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:NumberAxisTests-suite__[]->Test}
+MINE	true	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:SegmentedTimelineTests-suite__[]->Test}
+	P 3N 0	 Rule 185	x.type=VerticalNumberAxisTests, new(x).type=SegmentedTimelineTests
+CONFLICT	false	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:NumberAxisTests-testSerialization__[]->void}
+MINE	true	{org.jfree.chart.axis.junit:VerticalNumberAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:SegmentedTimelineTests-testSerialization__[]->void}
+	P 3N 0	 Rule 185	x.type=VerticalNumberAxisTests, new(x).type=SegmentedTimelineTests
+UNFOUND		{org.jfree.chart.axis.junit:VerticalSymbolicAxisTests-VerticalSymbolicAxisTests__[String]->void	org.jfree.chart.axis.junit:SymbolicAxisTests-SymbolicAxisTests__[String]->void}
+UNFOUND		{org.jfree.chart.axis.junit:VerticalSymbolicAxisTests-suite__[]->Test	org.jfree.chart.axis.junit:SymbolicAxisTests-suite__[]->Test}
+UNFOUND		{org.jfree.chart.axis.junit:VerticalSymbolicAxisTests-testSerialization__[]->void	org.jfree.chart.axis.junit:SymbolicAxisTests-testSerialization__[]->void}
+CONFLICT	false	{org.jfree.chart.demo:StackedVerticalBarChart3DDemo-StackedVerticalBarChart3DDemo__[String]->void	org.jfree.chart.demo:StackedBarChart3DDemo-StackedBarChart3DDemo__[String]->void}
+MINE	false	{org.jfree.chart.demo:StackedVerticalBarChart3DDemo-StackedVerticalBarChart3DDemo__[String]->void	org.jfree.chart.demo:BarChart3DDemo1-BarChart3DDemo1__[String]->void}
+	P 2N 0	 Rule 65	x.type=StackedVerticalBarChart3DDemo, new(x).type=BarChart3DDemo1
+CONFLICT	false	{org.jfree.chart.demo:StackedVerticalBarChart3DDemo-main__[String[]]->void	org.jfree.chart.demo:StackedBarChart3DDemo-main__[String[]]->void}
+MINE	false	{org.jfree.chart.demo:StackedVerticalBarChart3DDemo-main__[String[]]->void	org.jfree.chart.demo:BarChart3DDemo1-main__[String[]]->void}
+	P 2N 0	 Rule 65	x.type=StackedVerticalBarChart3DDemo, new(x).type=BarChart3DDemo1
+CONFLICT	false	{org.jfree.chart.demo:VerticalBarChart3DDemo-VerticalBarChart3DDemo__[String]->void	org.jfree.chart.demo:BarChart3DDemo1-BarChart3DDemo1__[String]->void}
+MINE	true	{org.jfree.chart.demo:VerticalBarChart3DDemo-VerticalBarChart3DDemo__[String]->void	org.jfree.chart.demo:BarChart3DDemo2-BarChart3DDemo2__[String]->void}
+	P 2N 0	 Rule 135	x.type=VerticalBarChart3DDemo, new(x).type=BarChart3DDemo2
+CONFLICT	false	{org.jfree.chart.demo:VerticalBarChart3DDemo-main__[String[]]->void	org.jfree.chart.demo:BarChart3DDemo1-main__[String[]]->void}
+MINE	true	{org.jfree.chart.demo:VerticalBarChart3DDemo-main__[String[]]->void	org.jfree.chart.demo:BarChart3DDemo2-main__[String[]]->void}
+	P 2N 0	 Rule 135	x.type=VerticalBarChart3DDemo, new(x).type=BarChart3DDemo2
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-add__[XYPlot, int]->void	org.jfree.chart.plot:CombinedDomainXYPlot-add__[XYPlot, int]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-add__[XYPlot, int]->void	org.jfree.chart.plot:CombinedRangeXYPlot-add__[XYPlot, int]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-add__[XYPlot]->void	org.jfree.chart.plot:CombinedDomainXYPlot-add__[XYPlot]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-add__[XYPlot]->void	org.jfree.chart.plot:CombinedRangeXYPlot-add__[XYPlot]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CombinedDomainXYPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CombinedRangeXYPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-equals__[Object]->boolean	org.jfree.chart.plot:CombinedDomainXYPlot-equals__[Object]->boolean}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-equals__[Object]->boolean	org.jfree.chart.plot:CombinedRangeXYPlot-equals__[Object]->boolean}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-getGap__[]->double	org.jfree.chart.plot:CombinedDomainXYPlot-getGap__[]->double}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-getGap__[]->double	org.jfree.chart.plot:CombinedRangeXYPlot-getGap__[]->double}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-getLegendItems__[]->LegendItemCollection	org.jfree.chart.plot:CombinedDomainXYPlot-getLegendItems__[]->LegendItemCollection}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-getLegendItems__[]->LegendItemCollection	org.jfree.chart.plot:CombinedRangeXYPlot-getLegendItems__[]->LegendItemCollection}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-getPlotType__[]->String	org.jfree.chart.plot:CombinedDomainXYPlot-getPlotType__[]->String}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-getPlotType__[]->String	org.jfree.chart.plot:CombinedRangeXYPlot-getPlotType__[]->String}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-getSubPlots__[]->List	org.jfree.chart.plot:CombinedDomainXYPlot-getSubplots__[]->List}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-getSubPlots__[]->List	org.jfree.chart.plot:CombinedRangeXYPlot-getSubPlots__[]->List}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-getVerticalDataRange__[ValueAxis]->Range	org.jfree.chart.plot:CombinedDomainXYPlot-getDataRange__[ValueAxis]->Range}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-getVerticalDataRange__[ValueAxis]->Range	org.jfree.chart.plot:CombinedRangeXYPlot-getDataRange__[ValueAxis]->Range}
+	P 2N 1	 Rule 7	x.type=CombinedXYPlot, new(x).type=CombinedDomainXYPlot
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+	P 6N 1	 Rule 125	x.procedure=getVerticalDataRange -> new(x).procedure=getDataRange
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-setGap__[double]->void	org.jfree.chart.plot:CombinedDomainXYPlot-setGap__[double]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-setGap__[double]->void	org.jfree.chart.plot:CombinedRangeXYPlot-setGap__[double]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-setRenderer__[XYItemRenderer]->void	org.jfree.chart.plot:CombinedDomainXYPlot-setRenderer__[XYItemRenderer]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-setRenderer__[XYItemRenderer]->void	org.jfree.chart.plot:CombinedRangeXYPlot-setRenderer__[XYItemRenderer]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:CombinedXYPlot-zoom__[double]->void	org.jfree.chart.plot:CombinedDomainXYPlot-zoom__[double]->void}
+MINE	true	{org.jfree.chart.plot:CombinedXYPlot-zoom__[double]->void	org.jfree.chart.plot:CombinedRangeXYPlot-zoom__[double]->void}
+	P 14N 5	 Rule 85	x.type=CombinedXYPlot, new(x).type=CombinedRangeXYPlot
+CONFLICT	false	{org.jfree.chart.plot:OverlaidVerticalCategoryPlot-add__[VerticalCategoryPlot]->void	org.jfree.chart.plot:OverlaidCategoryPlot-add__[CategoryPlot]->void}
+MINE	true	{org.jfree.chart.plot:OverlaidVerticalCategoryPlot-add__[VerticalCategoryPlot]->void	org.jfree.chart.plot:OverlaidCategoryPlot-add__[VerticalCategoryPlot]->void}
+	P 8N 0	 Rule 27	x.type=OverlaidVerticalCategoryPlot, new(x).type=OverlaidCategoryPlot
+CONFLICT	true	{org.jfree.chart.plot:OverlaidXYPlot-getVerticalDataRange__[ValueAxis]->Range	org.jfree.chart.plot:OverlaidXYPlot-getDataRange__[ValueAxis]->Range}
+MINE	false	{org.jfree.chart.plot:OverlaidXYPlot-getVerticalDataRange__[ValueAxis]->Range	org.jfree.chart.plot:XYPlot-getDataRange__[ValueAxis]->Range}
+	P 1N 0	 Rule 48	x.type=OverlaidXYPlot, new(x).type=XYPlot
+	P 6N 1	 Rule 125	x.procedure=getVerticalDataRange -> new(x).procedure=getDataRange
+CONFLICT	false	{org.jfree.chart.plot:VerticalCategoryPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CategoryPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	false	{org.jfree.chart.plot:VerticalCategoryPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CombinedDomainCategoryPlot-draw__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+	P 2N 1	 Rule 8	x.type=VerticalCategoryPlot, new(x).type=OverlaidXYPlot
+	P 1N 0	 Rule 42	x.type=VerticalCategoryPlot, new(x).type=CombinedDomainCategoryPlot
+	P 2N 1	 Rule 158	new(x).parameters = x.parameters+[CrosshairInfo]
+CONFLICT	false	{org.jfree.chart.plot:VerticalCategoryPlot-getPlotType__[]->String	org.jfree.chart.plot:CategoryPlot-getPlotType__[]->String}
+MINE	false	{org.jfree.chart.plot:VerticalCategoryPlot-getPlotType__[]->String	org.jfree.chart.plot:CombinedRangeXYPlot-getPlotType__[]->String}
+	P 1N 0	 Rule 15	x.type=VerticalCategoryPlot, new(x).type=CombinedRangeXYPlot
+UNFOUND		{org.jfree.chart.plot:VerticalCategoryPlot-handleClick__[int, int, ChartRenderingInfo]->void	org.jfree.chart.plot:CategoryPlot-handleClick__[int, int, ChartRenderingInfo]->void}
+CONFLICT	false	{org.jfree.chart.plot:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	false	{org.jfree.chart.plot:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:OverlaidXYPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo, CrosshairInfo]->void}
+	P 2N 1	 Rule 8	x.type=VerticalCategoryPlot, new(x).type=OverlaidXYPlot
+	P 2N 1	 Rule 158	new(x).parameters = x.parameters+[CrosshairInfo]
+CONFLICT	false	{org.jfree.chart.plot:VerticalCategoryPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:CategoryPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	false	{org.jfree.chart.plot:VerticalCategoryPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void	org.jfree.chart.plot:OverlaidXYPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo, CrosshairInfo]->void}
+	P 2N 1	 Rule 8	x.type=VerticalCategoryPlot, new(x).type=OverlaidXYPlot
+	P 2N 1	 Rule 158	new(x).parameters = x.parameters+[CrosshairInfo]
+UNFOUND		{org.jfree.chart.plot:VerticalValuePlot-getVerticalDataRange__[ValueAxis]->Range	org.jfree.chart.plot:ValueAxisPlot-getDataRange__[ValueAxis]->Range}
+CONFLICT	false	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-AbstractCategoryItemRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-AbstractCategoryItemRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-AbstractCategoryItemRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-AbstractCategoryItemRenderer__[CategoryURLGenerator]->void}
+	P 4N 0	 Rule 101	x.parameters= x.parameters-{[CategoryToolTipGenerator]}
+CONFLICT	false	{org.jfree.chart.renderer:AbstractRenderer-setPlot__[Plot]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setPlot__[CategoryPlot]->void}
+MINE	false	{org.jfree.chart.renderer:AbstractRenderer-setPlot__[Plot]->void	org.jfree.chart.renderer:CategoryItemRenderer-setPlot__[Plot]->void}
+	P 2N 0	 Rule 167	x.type=AbstractRenderer, new(x).type=CategoryItemRenderer
+CONFLICT	false	{org.jfree.chart.renderer:AbstractRenderer-setPlot__[Plot]->void	org.jfree.chart.renderer:AbstractXYItemRenderer-setPlot__[XYPlot]->void}
+MINE	false	{org.jfree.chart.renderer:AbstractRenderer-setPlot__[Plot]->void	org.jfree.chart.renderer:CategoryItemRenderer-setPlot__[Plot]->void}
+	P 2N 0	 Rule 167	x.type=AbstractRenderer, new(x).type=CategoryItemRenderer
+CONFLICT	false	{org.jfree.chart.renderer:AbstractRenderer-setSeriesPaint__[int, int, Paint]->void	org.jfree.chart.renderer:AbstractRenderer-setSeriesItemLabelPaint__[int, Paint]->void}
+MINE	true	{org.jfree.chart.renderer:AbstractRenderer-setSeriesPaint__[int, int, Paint]->void	org.jfree.chart.renderer:AbstractRenderer-setSeriesPaint__[int, Paint]->void}
+	P 3N 1	 Rule 17	x.parameters=[int, int, Paint]-> new(x).parameters=[int, Paint]
+UNFOUND		{org.jfree.chart.renderer:AreaRenderer-AreaRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:AreaRenderer-AreaRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:BarRenderer-BarRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:BarRenderer-BarRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+CONFLICT	false	{org.jfree.chart.renderer:HorizontalIntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:BarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	true	{org.jfree.chart.renderer:HorizontalIntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:IntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+	P 13N 0	 Rule 57	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+	P 1N 0	 Rule 147	x.type=HorizontalIntervalBarRenderer, new(x).type=IntervalBarRenderer
+UNFOUND		{org.jfree.chart.renderer:ShapeTable-getColumnCount__[]->int	org.jfree.chart.renderer:ObjectTable-getColumnCount__[]->int}
+UNFOUND		{org.jfree.chart.renderer:ShapeTable-getRowCount__[]->int	org.jfree.chart.renderer:ObjectTable-getRowCount__[]->int}
+UNFOUND		{org.jfree.chart.renderer:ShapeTable-readObject__[ObjectInputStream]->void	org.jfree.chart.renderer:ObjectTable-readObject__[ObjectInputStream]->void}
+UNFOUND		{org.jfree.chart.renderer:ShapeTable-writeObject__[ObjectOutputStream]->void	org.jfree.chart.renderer:ObjectTable-writeObject__[ObjectOutputStream]->void}
+UNFOUND		{org.jfree.chart.renderer:StackedAreaRenderer-StackedAreaRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:StackedAreaRenderer-StackedAreaRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+CONFLICT	false	{org.jfree.chart.renderer:StackedHorizontalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:BarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	true	{org.jfree.chart.renderer:StackedHorizontalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:StackedBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+	P 13N 0	 Rule 57	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+	P 6N 2	 Rule 173	x.type=StackedHorizontalBarRenderer, new(x).type=StackedBarRenderer
+UNFOUND		{org.jfree.chart.renderer:StackedVerticalBarRenderer-StackedVerticalBarRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:StackedBarRenderer-StackedBarRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:StackedVerticalBarRenderer-StackedVerticalBarRenderer__[CategoryToolTipGenerator]->void	org.jfree.chart.renderer:StackedBarRenderer-StackedBarRenderer__[CategoryItemLabelGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:StrokeTable-getColumnCount__[]->int	org.jfree.chart.renderer:ObjectTable-getColumnCount__[]->int}
+UNFOUND		{org.jfree.chart.renderer:StrokeTable-getRowCount__[]->int	org.jfree.chart.renderer:ObjectTable-getRowCount__[]->int}
+UNFOUND		{org.jfree.chart.renderer:StrokeTable-readObject__[ObjectInputStream]->void	org.jfree.chart.renderer:ObjectTable-readObject__[ObjectInputStream]->void}
+UNFOUND		{org.jfree.chart.renderer:StrokeTable-writeObject__[ObjectOutputStream]->void	org.jfree.chart.renderer:ObjectTable-writeObject__[ObjectOutputStream]->void}
+CONFLICT	false	{org.jfree.chart.renderer:VerticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:BarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	false	{org.jfree.chart.renderer:VerticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:StackedBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+	P 13N 0	 Rule 57	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+	P 1N 0	 Rule 174	x.type=VerticalBarRenderer, new(x).type=StackedBarRenderer
+CONFLICT	false	{org.jfree.chart.renderer:VerticalBarRenderer3D-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:BarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	true	{org.jfree.chart.renderer:VerticalBarRenderer3D-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]->void	org.jfree.chart.renderer:BarRenderer3D-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+	P 14N 2	 Rule 41	x.type=VerticalBarRenderer3D, new(x).type=BarRenderer3D
+	P 13N 0	 Rule 57	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+UNFOUND		{org.jfree.chart.renderer:VerticalIntervalBarRenderer-VerticalIntervalBarRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:IntervalBarRenderer-IntervalBarRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalIntervalBarRenderer-VerticalIntervalBarRenderer__[CategoryToolTipGenerator]->void	org.jfree.chart.renderer:IntervalBarRenderer-IntervalBarRenderer__[CategoryItemLabelGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalIntervalBarRenderer-VerticalIntervalBarRenderer__[CategoryURLGenerator]->void	org.jfree.chart.renderer:IntervalBarRenderer-IntervalBarRenderer__[CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalIntervalBarRenderer-VerticalIntervalBarRenderer__[]->void	org.jfree.chart.renderer:IntervalBarRenderer-IntervalBarRenderer__[]->void}
+CONFLICT	false	{org.jfree.chart.renderer:VerticalIntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]->void	org.jfree.chart.renderer:IntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	false	{org.jfree.chart.renderer:VerticalIntervalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]->void	org.jfree.chart.renderer:StatisticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+	P 2N 1	 Rule 6	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+	P 1N 0	 Rule 131	x.type=VerticalIntervalBarRenderer, new(x).type=StatisticalBarRenderer
+UNFOUND		{org.jfree.chart.renderer:VerticalIntervalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	org.jfree.chart.renderer:IntervalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-VerticalStatisticalBarRenderer__[CategoryToolTipGenerator, CategoryURLGenerator]->void	org.jfree.chart.renderer:StatisticalBarRenderer-StatisticalBarRenderer__[CategoryItemLabelGenerator, CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-VerticalStatisticalBarRenderer__[CategoryToolTipGenerator]->void	org.jfree.chart.renderer:StatisticalBarRenderer-StatisticalBarRenderer__[CategoryItemLabelGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-VerticalStatisticalBarRenderer__[CategoryURLGenerator]->void	org.jfree.chart.renderer:StatisticalBarRenderer-StatisticalBarRenderer__[CategoryURLGenerator]->void}
+UNFOUND		{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-VerticalStatisticalBarRenderer__[]->void	org.jfree.chart.renderer:StatisticalBarRenderer-StatisticalBarRenderer__[]->void}
+CONFLICT	true	{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]->void	org.jfree.chart.renderer:StatisticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]->void}
+MINE	false	{org.jfree.chart.renderer:VerticalStatisticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]->void	org.jfree.chart.renderer:StatisticalBarRenderer-drawItem__[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, StatisticalCategoryDataset, int, int]->void}
+	P 2N 1	 Rule 6	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, CategoryDataset, int, int]
+	P 1N 0	 Rule 77	x.parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, KeyedValues2DDataset, int, int, int]-> new(x).parameters=[Graphics2D, Rectangle2D, CategoryPlot, CategoryAxis, ValueAxis, StatisticalCategoryDataset, int, int]
+	P 1N 0	 Rule 159	x.type=VerticalStatisticalBarRenderer, new(x).type=StatisticalBarRenderer
+CONFLICT	true	{org.jfree.chart.renderer:VerticalXYBarRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]->void	org.jfree.chart.renderer:XYBarRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo, int]->void}
+MINE	false	{org.jfree.chart.renderer:VerticalXYBarRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]->void	org.jfree.chart.renderer:XYDifferenceRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo, int]->void}
+	P 14N 0	 Rule 52	x.parameters=[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]-> new(x).parameters=[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo, int]
+	P 1N 0	 Rule 76	x.type=VerticalXYBarRenderer, new(x).type=XYDifferenceRenderer
+	P 5N 1	 Rule 172	x.type=VerticalXYBarRenderer, new(x).type=XYBarRenderer
+conflict_true:	46
+conflict_false:	15
+unfound:	72
+rename	197
+move	121
+param	310
+rename_package	1
+rename_class	32
+rename_interface	1
+rename_method	101
+rename_constructor	62
+rename_field	0
+move_class	1
+move_interface	1
+move_method	119
+move_field	0
+param_change_identifier	80
+param_renameormove_paramtype	14
+param_remove_parameter	72
+param_add_parameter	94
+param_change_paramtype	50
+0.9.9 - 0.9.10
+domain	345
+codomain	362
+ruleMatch	204
+xsMatch	164
+++:140	%L68	%R85
++-:64	%L31
+-+:24	%R14
+UNFOUND		{org.jfree.chart.axis:NumberAxis-isVerticalTickLabels__[]->boolean	org.jfree.chart.axis:ValueAxis-isVerticalTickLabels__[]->boolean}
+UNFOUND		{org.jfree.chart.axis:NumberAxis-setVerticalTickLabels__[boolean]->void	org.jfree.chart.axis:ValueAxis-setVerticalTickLabels__[boolean]->void}
+UNFOUND		{org.jfree.chart.axis:ValueAxis-getAnchorValue__[]->double	org.jfree.chart.plot:CategoryPlot-getAnchorValue__[]->double}
+UNFOUND		{org.jfree.chart.axis:ValueAxis-setAnchorValue__[double]->void	org.jfree.chart.plot:CategoryPlot-setAnchorValue__[double, boolean]->void}
+UNFOUND		{org.jfree.chart.axis:ValueAxis-setAnchorValue__[double]->void	org.jfree.chart.plot:CategoryPlot-setAnchorValue__[double]->void}
+CONFLICT	false	{org.jfree.chart.junit:VerticalBarChartTests-VerticalBarChartTests__[String]->void	org.jfree.chart.junit:BarChartTests-BarChartTests__[String]->void}
+MINE	false	{org.jfree.chart.junit:VerticalBarChartTests-VerticalBarChartTests__[String]->void	org.jfree.chart.demo:VerticalBarChartDemo-VerticalBarChartDemo__[String]->void}
+	P 2N 0	 Rule 39	x.package=org.jfree.chart.junit -> new(x).package=org.jfree.chart.demo
+	P 2N 0	 Rule 57	x.type=VerticalBarChartTests, new(x).type=VerticalBarChartDemo
+CONFLICT	false	{org.jfree.chart.junit:VerticalBarChartTests-createVerticalBarChart__[]->JFreeChart	org.jfree.chart.junit:BarChartTests-createBarChart__[]->JFreeChart}
+MINE	false	{org.jfree.chart.junit:VerticalBarChartTests-createVerticalBarChart__[]->JFreeChart	org.jfree.chart.demo:VerticalBarChartDemo-createChart__[CategoryDataset]->JFreeChart}
+	P 1N 0	 Rule 30	new(x).parameters = x.parameters+[CategoryDataset]
+	P 2N 0	 Rule 39	x.package=org.jfree.chart.junit -> new(x).package=org.jfree.chart.demo
+	P 1N 0	 Rule 42	x.procedure=createVerticalBarChart -> new(x).procedure=createChart
+	P 2N 0	 Rule 57	x.type=VerticalBarChartTests, new(x).type=VerticalBarChartDemo
+UNFOUND		{org.jfree.chart.junit:VerticalBarChartTests-setUp__[]->void	org.jfree.chart.junit:BarChartTests-setUp__[]->void}
+UNFOUND		{org.jfree.chart.junit:VerticalBarChartTests-suite__[]->Test	org.jfree.chart.junit:BarChartTests-suite__[]->Test}
+UNFOUND		{org.jfree.chart.junit:VerticalBarChartTests-testDrawWithNullInfo__[]->void	org.jfree.chart.junit:BarChartTests-testDrawWithNullInfo__[]->void}
+UNFOUND		{org.jfree.chart.junit:VerticalBarChartTests-testReplaceDataset__[]->void	org.jfree.chart.junit:BarChartTests-testReplaceDataset__[]->void}
+CONFLICT	false	{org.jfree.chart.plot:Plot-Plot__[Dataset]->void	org.jfree.chart.plot:Plot-Plot__[]->void}
+MINE	true	{org.jfree.chart.plot:Plot-Plot__[Dataset]->void	org.jfree.chart.plot:MeterPlot-MeterPlot__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:CategoryPlot-setDataset__[CategoryDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:XYPlot-setDataset__[XYDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:ThermometerPlot-setDataset__[ValueDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:ContourPlot-setDataset__[ContourDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:PiePlot-setDataset__[PieDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[MeterDataset]->void}
+MINE	true	{org.jfree.chart.plot:Plot-setDataset__[Dataset]->void	org.jfree.chart.plot:MeterPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setSecondaryDataset__[Dataset]->void	org.jfree.chart.plot:CategoryPlot-setSecondaryDataset__[int, CategoryDataset]->void}
+MINE	false	{org.jfree.chart.plot:Plot-setSecondaryDataset__[Dataset]->void	org.jfree.chart.plot:ContourPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+	P 1N 0	 Rule 54	x.procedure=setSecondaryDataset -> new(x).procedure=setDataset
+	P 1N 0	 Rule 62	x.type=Plot, new(x).type=ContourPlot
+CONFLICT	false	{org.jfree.chart.plot:Plot-setSecondaryDataset__[Dataset]->void	org.jfree.chart.plot:XYPlot-setSecondaryDataset__[int, XYDataset]->void}
+MINE	false	{org.jfree.chart.plot:Plot-setSecondaryDataset__[Dataset]->void	org.jfree.chart.plot:ContourPlot-setDataset__[Dataset]->void}
+	P 4N 4	 Rule 15	x.type=Plot, new(x).type=MeterPlot
+	P 1N 0	 Rule 54	x.procedure=setSecondaryDataset -> new(x).procedure=setDataset
+	P 1N 0	 Rule 62	x.type=Plot, new(x).type=ContourPlot
+UNFOUND		{org.jfree.chart.plot:XYPlot-getDrawingSupplier__[]->DrawingSupplier	org.jfree.chart.plot:Plot-getDrawingSupplier__[]->DrawingSupplier}
+UNFOUND		{org.jfree.chart.plot:XYPlot-setDrawingSupplier__[DrawingSupplier]->void	org.jfree.chart.plot:Plot-setDrawingSupplier__[DrawingSupplier]->void}
+UNFOUND		{org.jfree.chart.renderer:CategoryItemLabelGeneratorTable-CategoryItemLabelGeneratorTable__[]->void	org.jfree.chart.renderer:CategoryURLGeneratorTable-CategoryURLGeneratorTable__[]->void}
+CONFLICT	false	{org.jfree.chart.renderer:CategoryItemLabelGeneratorTable-setLabelGenerator__[int, int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryURLGeneratorTable-setURLGenerator__[int, int, CategoryURLGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:CategoryItemLabelGeneratorTable-setLabelGenerator__[int, int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setSeriesItemLabelGenerator__[int, CategoryItemLabelGenerator]->void}
+	P 2N 0	 Rule 3	x.type=CategoryItemLabelGeneratorTable, new(x).type=CategoryItemRenderer
+	P 1N 0	 Rule 18	x.parameters=[int, int, CategoryItemLabelGenerator]-> new(x).parameters=[int, CategoryItemLabelGenerator]
+	P 1N 0	 Rule 22	x.procedure=setLabelGenerator -> new(x).procedure=setSeriesItemLabelGenerator
+conflict_true:	8
+conflict_false:	4
+unfound:	12
+rename	111
+move	18
+param	200
+rename_package	1
+rename_class	3
+rename_interface	0
+rename_method	102
+rename_constructor	5
+rename_field	0
+move_class	0
+move_interface	0
+move_method	18
+move_field	0
+param_change_identifier	39
+param_renameormove_paramtype	0
+param_remove_parameter	69
+param_add_parameter	89
+param_change_paramtype	3
+0.9.10 - 0.9.12
+domain	112
+codomain	808
+ruleMatch	88
+xsMatch	0
+conflict_true:	0
+conflict_false:	0
+unfound:	0
+rename	0
+move	0
+param	0
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	0
+rename_constructor	0
+rename_field	0
+move_class	0
+move_interface	0
+move_method	0
+move_field	0
+param_change_identifier	0
+param_renameormove_paramtype	0
+param_remove_parameter	0
+param_add_parameter	0
+param_change_paramtype	0
+0.9.12 - 0.9.16
+domain	434
+codomain	1134
+ruleMatch	330
+xsMatch	0
+conflict_true:	0
+conflict_false:	0
+unfound:	0
+rename	0
+move	0
+param	0
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	0
+rename_constructor	0
+rename_field	0
+move_class	0
+move_interface	0
+move_method	0
+move_field	0
+param_change_identifier	0
+param_renameormove_paramtype	0
+param_remove_parameter	0
+param_add_parameter	0
+param_change_paramtype	0
+0.9.16 - 0.9.17
+domain	387
+codomain	1172
+ruleMatch	299
+xsMatch	229
+++:196	%L65	%R85
++-:103	%L34
+-+:33	%R14
+CONFLICT	false	{org.jfree.chart:Marker-Marker__[double, Paint]->void	org.jfree.chart.plot:Marker-Marker__[]->void}
+MINE	true	{org.jfree.chart:Marker-Marker__[double, Paint]->void	org.jfree.chart.plot:Marker-Marker__[Paint]->void}
+	P 34N 4	 Rule 66	x.package=org.jfree.chart -> new(x).package=org.jfree.chart.plot
+	P 2N 1	 Rule 122	x.parameters= x.parameters-{[double]}
+CONFLICT	false	{org.jfree.chart:Marker-Marker__[double]->void	org.jfree.chart.plot:Marker-Marker__[Paint]->void}
+MINE	true	{org.jfree.chart:Marker-Marker__[double]->void	org.jfree.chart.plot:Marker-Marker__[]->void}
+	P 34N 4	 Rule 66	x.package=org.jfree.chart -> new(x).package=org.jfree.chart.plot
+	P 2N 1	 Rule 122	x.parameters= x.parameters-{[double]}
+CONFLICT	false	{org.jfree.chart.demo:MultiPieChartDemo-MultiPieChartDemo__[String]->void	org.jfree.chart.demo:MultiplePieChartDemo3-MultiplePieChartDemo3__[String]->void}
+MINE	true	{org.jfree.chart.demo:MultiPieChartDemo-MultiPieChartDemo__[String]->void	org.jfree.chart.demo:MultiplePieChartDemo1-MultiplePieChartDemo1__[String]->void}
+	P 2N 0	 Rule 7	x.type=MultiPieChartDemo, new(x).type=MultiplePieChartDemo1
+CONFLICT	false	{org.jfree.chart.demo:MultiPieChartDemo-main__[String[]]->void	org.jfree.chart.demo:MultiplePieChartDemo3-main__[String[]]->void}
+MINE	true	{org.jfree.chart.demo:MultiPieChartDemo-main__[String[]]->void	org.jfree.chart.demo:MultiplePieChartDemo1-main__[String[]]->void}
+	P 2N 0	 Rule 7	x.type=MultiPieChartDemo, new(x).type=MultiplePieChartDemo1
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-StackedVerticalBarChartTests__[String]->void	org.jfree.chart.junit:StackedBarChartTests-StackedBarChartTests__[String]->void}
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-createChart__[]->JFreeChart	org.jfree.chart.junit:StackedBarChartTests-createChart__[]->JFreeChart}
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-setUp__[]->void	org.jfree.chart.junit:StackedBarChartTests-setUp__[]->void}
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-suite__[]->Test	org.jfree.chart.junit:StackedBarChartTests-suite__[]->Test}
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-testDrawWithNullInfo__[]->void	org.jfree.chart.junit:StackedBarChartTests-testDrawWithNullInfo__[]->void}
+UNFOUND		{org.jfree.chart.junit:StackedVerticalBarChartTests-testReplaceDataset__[]->void	org.jfree.chart.junit:StackedBarChartTests-testReplaceDataset__[]->void}
+UNFOUND		{org.jfree.chart.labels:BoxAndWhiskerToolTipGenerator-BoxAndWhiskerToolTipGenerator__[]->void	org.jfree.chart.labels:BoxAndWhiskerXYItemLabelGenerator-BoxAndWhiskerXYItemLabelGenerator__[]->void}
+CONFLICT	false	{org.jfree.chart.labels:StandardPieItemLabelGenerator-StandardPieItemLabelGenerator__[NumberFormat]->void	org.jfree.chart.labels:StandardPieItemLabelGenerator-StandardPieItemLabelGenerator__[String, NumberFormat, NumberFormat]->void}
+MINE	true	{org.jfree.chart.labels:StandardPieItemLabelGenerator-StandardPieItemLabelGenerator__[NumberFormat]->void	org.jfree.chart.labels:StandardPieItemLabelGenerator-StandardPieItemLabelGenerator__[String]->void}
+	P 1N 0	 Rule 62	x.parameters=[NumberFormat]-> new(x).parameters=[String]
+CONFLICT	false	{org.jfree.chart.labels:StandardXYToolTipGenerator-StandardXYToolTipGenerator__[NumberFormat, NumberFormat]->void	org.jfree.chart.labels:StandardXYItemLabelGenerator-StandardXYItemLabelGenerator__[String, String, NumberFormat, NumberFormat]->void}
+MINE	true	{org.jfree.chart.labels:StandardXYToolTipGenerator-StandardXYToolTipGenerator__[NumberFormat, NumberFormat]->void	org.jfree.chart.labels:StandardXYItemLabelGenerator-StandardXYItemLabelGenerator__[DateFormat, NumberFormat]->void}
+	P 1N 0	 Rule 32	x.parameters=[NumberFormat, NumberFormat]-> new(x).parameters=[DateFormat, NumberFormat]
+	P 1N 0	 Rule 46	x.type=StandardXYToolTipGenerator, new(x).type=StandardXYItemLabelGenerator
+	P 6N 1	 Rule 85	x.type=StandardXYToolTipGenerator, new(x).type=AbstractXYItemLabelGenerator
+CONFLICT	false	{org.jfree.chart.labels:StandardXYToolTipGenerator-StandardXYToolTipGenerator__[]->void	org.jfree.chart.labels:StandardXYItemLabelGenerator-StandardXYItemLabelGenerator__[]->void}
+MINE	true	{org.jfree.chart.labels:StandardXYToolTipGenerator-StandardXYToolTipGenerator__[]->void	org.jfree.chart.labels:AbstractXYItemLabelGenerator-AbstractXYItemLabelGenerator__[]->void}
+	P 6N 1	 Rule 85	x.type=StandardXYToolTipGenerator, new(x).type=AbstractXYItemLabelGenerator
+CONFLICT	false	{org.jfree.chart.labels:StandardXYToolTipGenerator-clone__[]->Object	org.jfree.chart.labels:StandardXYItemLabelGenerator-clone__[]->Object}
+MINE	true	{org.jfree.chart.labels:StandardXYToolTipGenerator-clone__[]->Object	org.jfree.chart.labels:AbstractXYItemLabelGenerator-clone__[]->Object}
+	P 6N 1	 Rule 85	x.type=StandardXYToolTipGenerator, new(x).type=AbstractXYItemLabelGenerator
+CONFLICT	false	{org.jfree.chart.labels:StandardXYToolTipGenerator-equals__[Object]->boolean	org.jfree.chart.labels:StandardXYItemLabelGenerator-equals__[Object]->boolean}
+MINE	true	{org.jfree.chart.labels:StandardXYToolTipGenerator-equals__[Object]->boolean	org.jfree.chart.labels:AbstractXYItemLabelGenerator-equals__[Object]->boolean}
+	P 6N 1	 Rule 85	x.type=StandardXYToolTipGenerator, new(x).type=AbstractXYItemLabelGenerator
+UNFOUND		{org.jfree.chart.plot:PiePlot-drawLabel__[Graphics2D, Rectangle2D, Rectangle2D, PieDataset, double, int, double, double]->void	org.jfree.chart.plot:PiePlot-drawLeftLabel__[Graphics2D, PiePlotState, PieLabelRecord]->void}
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-drawMultiplePies__[Graphics2D, Rectangle2D, PlotRenderingInfo]->void	org.jfree.chart.plot:PiePlot-drawPie__[Graphics2D, Rectangle2D, PlotRenderingInfo]->void}
+MINE	true	{org.jfree.chart.plot:PiePlot-drawMultiplePies__[Graphics2D, Rectangle2D, PlotRenderingInfo]->void	org.jfree.chart.plot:PiePlot-draw__[Graphics2D, Rectangle2D, PlotState, PlotRenderingInfo]->void}
+	P 1N 0	 Rule 17	x.procedure=drawMultiplePies -> new(x).procedure=draw
+	P 1N 0	 Rule 71	x.parameters=[Graphics2D, Rectangle2D, PlotRenderingInfo]-> new(x).parameters=[Graphics2D, Rectangle2D, PlotState, PlotRenderingInfo]
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-drawPie__[Graphics2D, Rectangle2D, PlotRenderingInfo, int, PieDataset, String]->void	org.jfree.chart.plot:PiePlot-drawItem__[Graphics2D, int, Rectangle2D, PiePlotState, int]->void}
+MINE	true	{org.jfree.chart.plot:PiePlot-drawPie__[Graphics2D, Rectangle2D, PlotRenderingInfo, int, PieDataset, String]->void	org.jfree.chart.plot:PiePlot-drawPie__[Graphics2D, Rectangle2D, PlotRenderingInfo]->void}
+	P 9N 5	 Rule 89	x.parameters= x.parameters-{[int]}
+	P 1N 0	 Rule 96	x.parameters= x.parameters-{[int, PieDataset, String]}
+UNFOUND		{org.jfree.chart.plot:PiePlot-getDefaultOutlinePaint__[]->Paint	org.jfree.chart.plot:PiePlot-getBaseSectionOutlinePaint__[]->Paint}
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-getDefaultOutlineStroke__[]->Stroke	org.jfree.chart.plot:PiePlot-getBaseSectionOutlineStroke__[]->Stroke}
+MINE	true	{org.jfree.chart.plot:PiePlot-getDefaultOutlineStroke__[]->Stroke	org.jfree.chart.plot:PiePlot-getLabelLinkStroke__[]->Stroke}
+	P 1N 0	 Rule 50	x.procedure=getDefaultOutlineStroke -> new(x).procedure=getLabelLinkStroke
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-getDefaultPaint__[]->Paint	org.jfree.chart.plot:PiePlot-getBaseSectionPaint__[]->Paint}
+MINE	true	{org.jfree.chart.plot:PiePlot-getDefaultPaint__[]->Paint	org.jfree.chart.plot:PiePlot-getLabelPaint__[]->Paint}
+	P 1N 0	 Rule 53	x.procedure=getDefaultPaint -> new(x).procedure=getLabelPaint
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-getSectionLabelPaint__[]->Paint	org.jfree.chart.plot:PiePlot-getLabelPaint__[]->Paint}
+MINE	true	{org.jfree.chart.plot:PiePlot-getSectionLabelPaint__[]->Paint	org.jfree.chart.plot:PiePlot-getBaseSectionPaint__[]->Paint}
+	P 1N 0	 Rule 35	x.procedure=getSectionLabelPaint -> new(x).procedure=getBaseSectionPaint
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-setDefaultOutlinePaint__[Paint]->void	org.jfree.chart.plot:PiePlot-setBaseSectionOutlinePaint__[Paint]->void}
+MINE	false	{org.jfree.chart.plot:PiePlot-setDefaultOutlinePaint__[Paint]->void	org.jfree.chart.plot:PolarPlot-setAngleLabelPaint__[Paint]->void}
+	P 4N 0	 Rule 26	x.type=PiePlot, new(x).type=PolarPlot
+	P 1N 0	 Rule 69	x.procedure=setDefaultOutlinePaint -> new(x).procedure=setAngleLabelPaint
+CONFLICT	false	{org.jfree.chart.plot:PiePlot-setDefaultOutlineStroke__[Stroke]->void	org.jfree.chart.plot:PiePlot-setBaseSectionOutlineStroke__[Stroke]->void}
+MINE	true	{org.jfree.chart.plot:PiePlot-setDefaultOutlineStroke__[Stroke]->void	org.jfree.chart.plot:PiePlot-setLabelLinkStroke__[Stroke]->void}
+	P 1N 0	 Rule 121	x.procedure=setDefaultOutlineStroke -> new(x).procedure=setLabelLinkStroke
+UNFOUND		{org.jfree.chart.plot:WaferMapPlot-propertyChange__[PropertyChangeEvent]->void	org.jfree.chart.plot:WaferMapPlot-rendererChanged__[RendererChangeEvent]->void}
+UNFOUND		{org.jfree.chart.plot:XYPlot-propertyChange__[PropertyChangeEvent]->void	org.jfree.chart.plot:XYPlot-rendererChanged__[RendererChangeEvent]->void}
+CONFLICT	false	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setBaseItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setBaseToolTipGenerator__[CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setBaseItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setBaseLabelGenerator__[CategoryItemLabelGenerator]->void}
+	P 2N 0	 Rule 73	x.procedure=setBaseItemLabelGenerator -> new(x).procedure=setBaseLabelGenerator
+CONFLICT	false	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setToolTipGenerator__[CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setLabelGenerator__[CategoryItemLabelGenerator]->void}
+	P 3N 0	 Rule 107	x.procedure=setItemLabelGenerator -> new(x).procedure=setLabelGenerator
+CONFLICT	false	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setSeriesItemLabelGenerator__[int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setSeriesToolTipGenerator__[int, CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:AbstractCategoryItemRenderer-setSeriesItemLabelGenerator__[int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:AbstractCategoryItemRenderer-setSeriesLabelGenerator__[int, CategoryItemLabelGenerator]->void}
+	P 2N 0	 Rule 16	x.procedure=setSeriesItemLabelGenerator -> new(x).procedure=setSeriesLabelGenerator
+CONFLICT	false	{org.jfree.chart.renderer:CategoryItemRenderer-setBaseItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setBaseToolTipGenerator__[CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:CategoryItemRenderer-setBaseItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setBaseLabelGenerator__[CategoryItemLabelGenerator]->void}
+	P 2N 0	 Rule 73	x.procedure=setBaseItemLabelGenerator -> new(x).procedure=setBaseLabelGenerator
+CONFLICT	false	{org.jfree.chart.renderer:CategoryItemRenderer-setItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setToolTipGenerator__[CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:CategoryItemRenderer-setItemLabelGenerator__[CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setLabelGenerator__[CategoryItemLabelGenerator]->void}
+	P 3N 0	 Rule 107	x.procedure=setItemLabelGenerator -> new(x).procedure=setLabelGenerator
+CONFLICT	false	{org.jfree.chart.renderer:CategoryItemRenderer-setSeriesItemLabelGenerator__[int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setSeriesToolTipGenerator__[int, CategoryItemLabelGenerator]->void}
+MINE	true	{org.jfree.chart.renderer:CategoryItemRenderer-setSeriesItemLabelGenerator__[int, CategoryItemLabelGenerator]->void	org.jfree.chart.renderer:CategoryItemRenderer-setSeriesLabelGenerator__[int, CategoryItemLabelGenerator]->void}
+	P 2N 0	 Rule 16	x.procedure=setSeriesItemLabelGenerator -> new(x).procedure=setSeriesLabelGenerator
+conflict_true:	21
+conflict_false:	1
+unfound:	11
+rename	137
+move	22
+param	231
+rename_package	0
+rename_class	18
+rename_interface	2
+rename_method	81
+rename_constructor	36
+rename_field	0
+move_class	6
+move_interface	0
+move_method	16
+move_field	0
+param_change_identifier	53
+param_renameormove_paramtype	8
+param_remove_parameter	80
+param_add_parameter	88
+param_change_paramtype	2
+0.9.17 - 0.9.19
+domain	429
+codomain	894
+ruleMatch	393
+xsMatch	0
+conflict_true:	0
+conflict_false:	0
+unfound:	0
+rename	0
+move	0
+param	0
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	0
+rename_constructor	0
+rename_field	0
+move_class	0
+move_interface	0
+move_method	0
+move_field	0
+param_change_identifier	0
+param_renameormove_paramtype	0
+param_remove_parameter	0
+param_add_parameter	0
+param_change_paramtype	0
+0.9.19 - 0.9.21
+domain	2772
+codomain	2222
+ruleMatch	1727
+xsMatch	0
+conflict_true:	0
+conflict_false:	0
+unfound:	0
+rename	0
+move	0
+param	0
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	0
+rename_constructor	0
+rename_field	0
+move_class	0
+move_interface	0
+move_method	0
+move_field	0
+param_change_identifier	0
+param_renameormove_paramtype	0
+param_remove_parameter	0
+param_add_parameter	0
+param_change_paramtype	0
+0.9.21 - 1.0.0
+domain	930
+codomain	2220
+ruleMatch	513
+xsMatch	63
+++:61	%L11	%R96
++-:452	%L88
+-+:2	%R3
+CONFLICT	false	{org.jfree.chart.plot:ContourPlot-zoomVerticalAxes__[double, double]->void	org.jfree.chart.plot:ContourPlot-zoomRangeAxes__[double, double, double, double]->void}
+MINE	true	{org.jfree.chart.plot:ContourPlot-zoomVerticalAxes__[double, double]->void	org.jfree.chart.plot:ContourPlot-zoomDomainAxes__[double, double, double, double]->void}
+	P 2N 0	 Rule 71	x.procedure=zoomVerticalAxes -> new(x).procedure=zoomDomainAxes
+	P 4N 0	 Rule 125	new(x).parameters = x.parameters+[double, double]
+	P 22N 9	 Rule 268	new(x).parameters = x.parameters+[PlotRenderingInfo, Point2D]
+	P 10N 4	 Rule 275	x.procedure=zoomVerticalAxes -> new(x).procedure=zoomRangeAxes
+CONFLICT	false	{org.jfree.chart.plot:ContourPlot-zoomVerticalAxes__[double]->void	org.jfree.chart.plot:ContourPlot-zoomRangeAxes__[double, double, double]->void}
+MINE	true	{org.jfree.chart.plot:ContourPlot-zoomVerticalAxes__[double]->void	org.jfree.chart.plot:ContourPlot-zoomDomainAxes__[double, double, double]->void}
+	P 2N 0	 Rule 71	x.procedure=zoomVerticalAxes -> new(x).procedure=zoomDomainAxes
+	P 4N 0	 Rule 125	new(x).parameters = x.parameters+[double, double]
+	P 22N 9	 Rule 268	new(x).parameters = x.parameters+[PlotRenderingInfo, Point2D]
+	P 10N 4	 Rule 275	x.procedure=zoomVerticalAxes -> new(x).procedure=zoomRangeAxes
+conflict_true:	2
+conflict_false:	0
+unfound:	0
+rename	59
+move	4
+param	116
+rename_package	0
+rename_class	0
+rename_interface	0
+rename_method	59
+rename_constructor	0
+rename_field	0
+move_class	0
+move_interface	0
+move_method	4
+move_field	0
+param_change_identifier	34
+param_renameormove_paramtype	0
+param_remove_parameter	1
+param_add_parameter	81
+param_change_paramtype	0

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+reldir=`pwd`
+builddir=$reldir/build
+libdir=$reldir/lib
+distdir=$reldir/dist
+jarfiles=`find $libdir $sepdir -name "*.jar"` 
+classpath=$builddir
+for file in $jarfiles ; do
+	classpath=$classpath:$file
+done
+if [ -n $CLASSPATH ] ; then
+	classpath=$classpath:$CLASSPATH
+fi
+
+java -Xmx1800m -Xms800m -classpath $classpath edu.ucsc.cse.grase.origin.OriginAnalysis $*

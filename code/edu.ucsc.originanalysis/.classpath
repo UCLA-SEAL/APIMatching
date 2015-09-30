@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.core.contenttype_3.2.0.v20051208.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.core.jobs_3.2.0.v20051208.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.core.resources_3.2.0.v20051208.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.core.runtime_3.2.0.v20051208.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.core.runtime.compatibility_3.1.0.v200511211912.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.equinox.common_1.0.0.v20051205.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.equinox.preferences_1.0.0.v20051211.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.jdt.core.fixed_by_hunkim_20060205.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.osgi_3.2.0.v20051212a.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.2M4/org.eclipse.text_3.1.100.v20051212-0800.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.0.1_cdt/cdtparser.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/eclipse3.0.1_cdt/cdtcore.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

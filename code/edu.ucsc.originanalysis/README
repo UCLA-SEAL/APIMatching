@@ -1,0 +1,8 @@
+Simple origin analysis tool 
+		By Sung Kim <hunkim@cs.ucsc.edu>
+
+- To Compile: ant
+
+- To Run: origin_analysis <old_rev_directory> <new_rev_directory>
+
+

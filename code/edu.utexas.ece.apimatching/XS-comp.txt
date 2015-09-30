@@ -1,0 +1,241 @@
+0.9.4 - 0.9.5
+domain	1439
+codomain	2063
+ruleMatch	1097
+xsMatch	1051
+++:950	%L86	%R90
++-:147	%L13
+-+:101	%R9
+UNFOUND		 SQ71%{com.jrefinery.chart:AbstractCategoryItemRenderer-getLegendItem__[int]->LegendItem	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-getLegendItem__[int, int]->LegendItem}
+UNFOUND		 SQ73%{com.jrefinery.chart:AbstractCategoryItemRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ValueAxis, CategoryDataset, ChartRenderingInfo]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ChartRenderingInfo]->void}
+UNFOUND		 SQ70%{com.jrefinery.chart:AbstractCategoryItemRenderer-setPlot__[CategoryPlot]->void	com.jrefinery.chart.renderer:AbstractRenderer-setPlot__[Plot]->void}
+UNFOUND		 SQ71%{com.jrefinery.chart:AbstractXYItemRenderer-getLegendItem__[int]->LegendItem	com.jrefinery.chart.renderer:AbstractXYItemRenderer-getLegendItem__[int, int]->LegendItem}
+UNFOUND		 SQ70%{com.jrefinery.chart:AbstractXYItemRenderer-setPlot__[XYPlot]->void	com.jrefinery.chart.renderer:AbstractRenderer-setPlot__[Plot]->void}
+CONFLICT	true	 SQ82%{com.jrefinery.chart:AreaCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	 SQ82%{com.jrefinery.chart:AreaCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:CategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+	P 2N 0	 Rule 8	x.type=AreaCategoryItemRenderer, new(x).type=CategoryItemRenderer
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 12N 7	 Rule 106	x.parameters= x.parameters-{[Shape]}
+CONFLICT	true	 SQ93%{com.jrefinery.chart:AreaXYItemRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo]->void	com.jrefinery.chart.renderer:AreaXYRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]->void}
+MINE	false	 SQ93%{com.jrefinery.chart:AreaXYItemRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo]->void	com.jrefinery.chart.renderer:XYItemRenderer-drawItem__[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]->void}
+	P 9N 1	 Rule 18	x.type=AreaXYItemRenderer, new(x).type=AreaXYRenderer
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 67	x.type=AreaXYItemRenderer, new(x).type=XYItemRenderer
+	P 10N 0	 Rule 93	x.parameters=[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, CrosshairInfo]-> new(x).parameters=[Graphics2D, Rectangle2D, ChartRenderingInfo, XYPlot, ValueAxis, ValueAxis, XYDataset, int, int, int, CrosshairInfo]
+UNFOUND		 SQ71%{com.jrefinery.chart:BarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ValueAxis, CategoryDataset, ChartRenderingInfo]->void	com.jrefinery.chart.renderer:BarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ChartRenderingInfo]->void}
+UNFOUND		 SQ69%{com.jrefinery.chart:CategoryItemRenderer-getLegendItem__[int]->LegendItem	com.jrefinery.chart.renderer:CategoryItemRenderer-getLegendItem__[int, int]->LegendItem}
+UNFOUND		 SQ72%{com.jrefinery.chart:CategoryItemRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ValueAxis, CategoryDataset, ChartRenderingInfo]->void	com.jrefinery.chart.renderer:CategoryItemRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ChartRenderingInfo]->void}
+UNFOUND		 SQ80%{com.jrefinery.chart:CategoryPlot-getLabelFont__[]->Font	com.jrefinery.chart.plot:CategoryPlot-getValueLabelFont__[]->Font}
+UNFOUND		 SQ80%{com.jrefinery.chart:CategoryPlot-getLabelPaint__[]->Paint	com.jrefinery.chart.plot:CategoryPlot-getValueLabelPaint__[]->Paint}
+UNFOUND		 SQ77%{com.jrefinery.chart:CategoryPlot-getVerticalLabels__[]->boolean	com.jrefinery.chart.plot:CategoryPlot-getVerticalValueLabels__[]->boolean}
+UNFOUND		 SQ80%{com.jrefinery.chart:CategoryPlot-setLabelFont__[Font]->void	com.jrefinery.chart.plot:CategoryPlot-setValueLabelFont__[Font]->void}
+UNFOUND		 SQ80%{com.jrefinery.chart:CategoryPlot-setLabelPaint__[Paint]->void	com.jrefinery.chart.plot:CategoryPlot-setValueLabelPaint__[Paint]->void}
+UNFOUND		 SQ75%{com.jrefinery.chart:CategoryPlot-setParent__[CategoryPlot]->void	com.jrefinery.chart.plot:Plot-setParent__[Plot]->void}
+UNFOUND		 SQ77%{com.jrefinery.chart:CategoryPlot-setVerticalLabels__[boolean]->void	com.jrefinery.chart.plot:CategoryPlot-setVerticalValueLabels__[boolean]->void}
+UNFOUND		 SQ69%{com.jrefinery.chart:CombinedXYPlot-getHorizontalDataRange__[]->Range	com.jrefinery.chart.plot:CombinedXYPlot-getHorizontalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ69%{com.jrefinery.chart:CombinedXYPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:CombinedXYPlot-getVerticalDataRange__[ValueAxis]->Range}
+CONFLICT	true	 SQ53%{com.jrefinery.chart:DateAxis-setTickUnitAttribute__[DateTickUnit]->void	com.jrefinery.chart.axis:DateAxis-setTickUnit__[DateTickUnit, boolean, boolean]->void}
+MINE	false	 SQ81%{com.jrefinery.chart:DateAxis-setTickUnitAttribute__[DateTickUnit]->void	com.jrefinery.chart.axis:DateAxis-setTickUnit__[DateTickUnit]->void}
+	P 2N 0	 Rule 63	x.procedure=setTickUnitAttribute -> new(x).procedure=setTickUnit
+	P 274N 42	 Rule 105	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.axis
+UNFOUND		 SQ72%{com.jrefinery.chart:HorizontalBarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ValueAxis, CategoryDataset, ChartRenderingInfo]->void	com.jrefinery.chart.renderer:HorizontalBarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ChartRenderingInfo]->void}
+CONFLICT	true	 SQ71%{com.jrefinery.chart:HorizontalBarRenderer3D-HorizontalBarRenderer3D__[double]->void	com.jrefinery.chart.renderer:HorizontalBarRenderer3D-HorizontalBarRenderer3D__[double, double]->void}
+MINE	false	 SQ83%{com.jrefinery.chart:HorizontalBarRenderer3D-HorizontalBarRenderer3D__[double]->void	com.jrefinery.chart.renderer:HorizontalBarRenderer3D-HorizontalBarRenderer3D__[]->void}
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 113	x.parameters= x.parameters-{[double]}
+UNFOUND		 SQ69%{com.jrefinery.chart:HorizontalCategoryPlot-getHorizontalDataRange__[]->Range	com.jrefinery.chart.plot:HorizontalCategoryPlot-getHorizontalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ80%{com.jrefinery.chart:HorizontalNumberAxis-getVerticalTickLabels__[]->boolean	com.jrefinery.chart.axis:HorizontalNumberAxis-isVerticalTickLabels__[]->boolean}
+UNFOUND		 SQ69%{com.jrefinery.chart:HorizontalValuePlot-getHorizontalDataRange__[]->Range	com.jrefinery.chart.plot:HorizontalValuePlot-getHorizontalDataRange__[ValueAxis]->Range}
+CONFLICT	false	 SQ88%{com.jrefinery.chart:JFreeChart-getTitle__[int]->AbstractTitle	com.jrefinery.chart:JFreeChart-getSubtitle__[int]->AbstractTitle}
+MINE	true	 SQ77%{com.jrefinery.chart:JFreeChart-getTitle__[int]->AbstractTitle	com.jrefinery.chart:JFreeChart-getTitle__[]->TextTitle}
+	P 1N 0	 Rule 42	x.return=AbstractTitle -> new(x).return=TextTitle
+	P 2N 0	 Rule 76	x.parameters= x.parameters-{[int]}
+UNFOUND		 SQ77%{com.jrefinery.chart:JThermometer-addTitle__[AbstractTitle]->void	com.jrefinery.chart.plot:JThermometer-addSubitle__[AbstractTitle]->void}
+UNFOUND		 SQ81%{com.jrefinery.chart:JThermometer-addTitle__[String, Font]->void	com.jrefinery.chart.plot:JThermometer-addSubtitle__[String, Font]->void}
+UNFOUND		 SQ75%{com.jrefinery.chart:JThermometer-addTitle__[String]->void	com.jrefinery.chart.plot:JThermometer-addSubtitle__[String]->void}
+CONFLICT	false	 SQ75%{com.jrefinery.chart:LineAndShapeRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	 SQ93%{com.jrefinery.chart:LineAndShapeRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:HorizontalShapeRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void}
+	P 1N 0	 Rule 43	x.type=LineAndShapeRenderer, new(x).type=HorizontalShapeRenderer
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 12N 7	 Rule 106	x.parameters= x.parameters-{[Shape]}
+UNFOUND		 SQ71%{com.jrefinery.chart:NumberAxis-isInverted__[]->boolean	com.jrefinery.chart.axis:ValueAxis-isInverted__[]->boolean}
+CONFLICT	true	 SQ53%{com.jrefinery.chart:NumberAxis-setTickUnitAttribute__[NumberTickUnit]->void	com.jrefinery.chart.axis:NumberAxis-setTickUnit__[NumberTickUnit, boolean, boolean]->void}
+MINE	false	 SQ81%{com.jrefinery.chart:NumberAxis-setTickUnitAttribute__[NumberTickUnit]->void	com.jrefinery.chart.axis:NumberAxis-setTickUnit__[NumberTickUnit]->void}
+	P 2N 0	 Rule 63	x.procedure=setTickUnitAttribute -> new(x).procedure=setTickUnit
+	P 274N 42	 Rule 105	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.axis
+UNFOUND		 SQ71%{com.jrefinery.chart:OverlaidVerticalCategoryPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:OverlaidVerticalCategoryPlot-getVerticalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ69%{com.jrefinery.chart:OverlaidXYPlot-getHorizontalDataRange__[]->Range	com.jrefinery.chart.plot:OverlaidXYPlot-getHorizontalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ69%{com.jrefinery.chart:OverlaidXYPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:OverlaidXYPlot-getVerticalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ66%{com.jrefinery.chart:PiePlot-PiePlot__[CategoryDataset]->void	com.jrefinery.chart.plot:PiePlot-PiePlot__[CategoryDataset, int]->void}
+UNFOUND		 SQ75%{com.jrefinery.chart:PiePlot-getCategories__[]->Collection	com.jrefinery.chart.plot:PiePlot-getKeys__[]->Collection}
+UNFOUND		 SQ75%{com.jrefinery.chart:PiePlot-getInteriorGapPercent__[]->double	com.jrefinery.chart.plot:PiePlot-getInteriorGap__[]->double}
+UNFOUND		 SQ71%{com.jrefinery.chart:PiePlot-getRadiusPercent__[]->double	com.jrefinery.chart.plot:PiePlot-getRadius__[]->double}
+UNFOUND		 SQ77%{com.jrefinery.chart:PiePlot-getSectionLabelGapPercent__[]->double	com.jrefinery.chart.plot:PiePlot-getSectionLabelGap__[]->double}
+UNFOUND		 SQ75%{com.jrefinery.chart:PiePlot-setInteriorGapPercent__[double]->void	com.jrefinery.chart.plot:PiePlot-setInteriorGap__[double]->void}
+UNFOUND		 SQ71%{com.jrefinery.chart:PiePlot-setRadiusPercent__[double]->void	com.jrefinery.chart.plot:PiePlot-setRadius__[double]->void}
+UNFOUND		 SQ77%{com.jrefinery.chart:PiePlot-setSectionLabelGapPercent__[double]->void	com.jrefinery.chart.plot:PiePlot-setSectionLabelGap__[double]->void}
+UNFOUND		 SQ66%{com.jrefinery.chart:ThermometerPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:ThermometerPlot-getVerticalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ15%{com.jrefinery.chart:ValueAxis-ValueAxis__[String, Font, Paint, Insets, boolean, Font, Paint, Insets, boolean, Stroke, Paint, Range, boolean, Number, boolean, TickUnits, boolean, Stroke, Paint, double, boolean, double, Stroke, Paint]->void	com.jrefinery.chart.axis:ValueAxis-ValueAxis__[String, TickUnits]->void}
+UNFOUND		 SQ80%{com.jrefinery.chart:ValueAxis-setAutoRangeMinimumSize__[Number]->void	com.jrefinery.chart.axis:ValueAxis-setAutoRangeMinimumSize__[double]->void}
+CONFLICT	false	 SQ78%{com.jrefinery.chart:VerticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	 SQ93%{com.jrefinery.chart:VerticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:VerticalIntervalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void}
+	P 1N 0	 Rule 49	x.type=VerticalBarRenderer, new(x).type=VerticalIntervalBarRenderer
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 12N 7	 Rule 106	x.parameters= x.parameters-{[Shape]}
+UNFOUND		 SQ72%{com.jrefinery.chart:VerticalBarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ValueAxis, CategoryDataset, ChartRenderingInfo]->void	com.jrefinery.chart.renderer:VerticalBarRenderer-initialise__[Graphics2D, Rectangle2D, CategoryPlot, ChartRenderingInfo]->void}
+CONFLICT	true	 SQ70%{com.jrefinery.chart:VerticalBarRenderer3D-VerticalBarRenderer3D__[CategoryToolTipGenerator, double]->void	com.jrefinery.chart.renderer:VerticalBarRenderer3D-VerticalBarRenderer3D__[double, double]->void}
+MINE	false	 SQ76%{com.jrefinery.chart:VerticalBarRenderer3D-VerticalBarRenderer3D__[CategoryToolTipGenerator, double]->void	com.jrefinery.chart.renderer:VerticalBarRenderer3D-VerticalBarRenderer3D__[CategoryToolTipGenerator, CategoryURLGenerator]->void}
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 82	x.parameters=[CategoryToolTipGenerator, double]-> new(x).parameters=[CategoryToolTipGenerator, CategoryURLGenerator]
+UNFOUND		 SQ69%{com.jrefinery.chart:VerticalCategoryPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:VerticalCategoryPlot-getVerticalDataRange__[ValueAxis]->Range}
+CONFLICT	false	 SQ75%{com.jrefinery.chart:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo, Shape]->void	com.jrefinery.chart.plot:VerticalCategoryPlot-render2__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+MINE	true	 SQ80%{com.jrefinery.chart:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo, Shape]->void	com.jrefinery.chart.plot:VerticalCategoryPlot-render__[Graphics2D, Rectangle2D, ChartRenderingInfo]->void}
+	P 355N 86	 Rule 62	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.plot
+	P 12N 7	 Rule 106	x.parameters= x.parameters-{[Shape]}
+CONFLICT	false	 SQ75%{com.jrefinery.chart:VerticalStatisticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:AbstractCategoryItemRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D]->void}
+MINE	false	 SQ93%{com.jrefinery.chart:VerticalStatisticalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void	com.jrefinery.chart.renderer:VerticalIntervalBarRenderer-drawRangeMarker__[Graphics2D, CategoryPlot, ValueAxis, Marker, Rectangle2D, Shape]->void}
+	P 213N 13	 Rule 50	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.renderer
+	P 1N 0	 Rule 72	x.type=VerticalStatisticalBarRenderer, new(x).type=VerticalIntervalBarRenderer
+	P 12N 7	 Rule 106	x.parameters= x.parameters-{[Shape]}
+UNFOUND		 SQ69%{com.jrefinery.chart:VerticalValuePlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:VerticalValuePlot-getVerticalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ69%{com.jrefinery.chart:XYItemRenderer-getLegendItem__[int]->LegendItem	com.jrefinery.chart.renderer:XYItemRenderer-getLegendItem__[int, int]->LegendItem}
+UNFOUND		 SQ77%{com.jrefinery.chart:XYPlot-addAnnotation__[Annotation]->void	com.jrefinery.chart.plot:XYPlot-addAnnotation__[XYAnnotation]->void}
+UNFOUND		 SQ66%{com.jrefinery.chart:XYPlot-getHorizontalDataRange__[]->Range	com.jrefinery.chart.plot:XYPlot-getHorizontalDataRange__[ValueAxis]->Range}
+UNFOUND		 SQ66%{com.jrefinery.chart:XYPlot-getVerticalDataRange__[]->Range	com.jrefinery.chart.plot:XYPlot-getVerticalDataRange__[ValueAxis]->Range}
+CONFLICT	true	 SQ81%{com.jrefinery.chart:XYPlot-setXYItemRenderer__[XYItemRenderer]->void	com.jrefinery.chart.plot:XYPlot-setSecondaryRenderer__[XYItemRenderer]->void}
+MINE	false	 SQ84%{com.jrefinery.chart:XYPlot-setXYItemRenderer__[XYItemRenderer]->void	com.jrefinery.chart.plot:CombinedXYPlot-setXYItemRenderer__[XYItemRenderer]->void}
+	P 355N 86	 Rule 62	x.package=com.jrefinery.chart -> new(x).package=com.jrefinery.chart.plot
+	P 1N 0	 Rule 91	x.type=XYPlot, new(x).type=CombinedXYPlot
+UNFOUND		 SQ55%{com.jrefinery.chart.demo:ChartTiming1-setFinished__[boolean]->void	com.jrefinery.chart.demo:ChartTiming1-actionPerformed__[ActionEvent]->void}
+CONFLICT	true	 SQ84%{com.jrefinery.chart.demo:DemoDatasetFactory-createSampleGanttDataset__[]->IntervalCategoryDataset	com.jrefinery.chart.demo:DemoDatasetFactory-createGanttDataset1__[]->IntervalCategoryDataset}
+MINE	false	 SQ84%{com.jrefinery.chart.demo:DemoDatasetFactory-createSampleGanttDataset__[]->IntervalCategoryDataset	com.jrefinery.chart.demo:DemoDatasetFactory-createGanttDataset2__[]->IntervalCategoryDataset}
+	P 1N 0	 Rule 101	x.procedure=createSampleGanttDataset -> new(x).procedure=createGanttDataset2
+CONFLICT	false	 SQ75%{com.jrefinery.data:DatasetUtilities-createPieDataset__[CategoryDataset, Object]->PieDataset	com.jrefinery.data:DatasetUtilities-createPieDatasetForColumn__[CategoryDataset, Comparable]->PieDataset}
+MINE	false	 SQ73%{com.jrefinery.data:DatasetUtilities-createPieDataset__[CategoryDataset, Object]->PieDataset	com.jrefinery.data:DatasetUtilities-createPieDatasetForRow__[CategoryDataset, int]->PieDataset}
+	P 2N 0	 Rule 21	x.procedure=createPieDataset -> new(x).procedure=createPieDatasetForRow
+	P 1N 0	 Rule 111	x.parameters=[CategoryDataset, Object]-> new(x).parameters=[CategoryDataset, int]
+CONFLICT	true	 SQ71%{com.jrefinery.data:Day-getEnd__[Calendar]->long	com.jrefinery.data:Day-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Day-getEnd__[Calendar]->long	com.jrefinery.data:Day-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+UNFOUND		 SQ50%{com.jrefinery.data:DefaultCategoryDataset-DefaultCategoryDataset__[String[], Object[], Number[][]]->void	com.jrefinery.data:DefaultCategoryDataset-DefaultCategoryDataset__[]->void}
+CONFLICT	false	 SQ77%{com.jrefinery.data:DefaultCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultCategoryDataset-getColumnKeys__[]->List}
+MINE	false	 SQ88%{com.jrefinery.data:DefaultCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategories__[]->List}
+	P 5N 1	 Rule 99	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	 SQ87%{com.jrefinery.data:DefaultCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultCategoryDataset-getColumnCount__[]->int}
+MINE	true	 SQ88%{com.jrefinery.data:DefaultCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategoryCount__[]->int}
+	P 5N 1	 Rule 99	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	 SQ87%{com.jrefinery.data:DefaultCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultCategoryDataset-getRowCount__[]->int}
+MINE	false	 SQ88%{com.jrefinery.data:DefaultCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getSeriesCount__[]->int}
+	P 5N 1	 Rule 99	x.type=DefaultCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	 SQ76%{com.jrefinery.data:DefaultCategoryDataset-setValue__[int, Object, Number]->void	com.jrefinery.data:DefaultCategoryDataset-setValue__[double, Comparable, Comparable]->void}
+MINE	true	 SQ71%{com.jrefinery.data:DefaultCategoryDataset-setValue__[int, Object, Number]->void	com.jrefinery.data:DefaultCategoryDataset-setValue__[Number, Comparable, Comparable]->void}
+	P 1N 0	 Rule 36	x.parameters=[int, Object, Number]-> new(x).parameters=[Number, Comparable, Comparable]
+UNFOUND		 SQ70%{com.jrefinery.data:DefaultIntervalCategoryDataset-setCategories__[Object[]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-setCategoryKeys__[Comparable[]]->void}
+CONFLICT	false	 SQ80%{com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesNames__[String[]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesKeys__[Comparable[]]->void}
+MINE	false	 SQ80%{com.jrefinery.data:DefaultIntervalCategoryDataset-setSeriesNames__[String[]]->void	com.jrefinery.data:DefaultContourDataset-setSeriesNames__[String[]]->void}
+	P 1N 0	 Rule 88	x.type=DefaultIntervalCategoryDataset, new(x).type=DefaultContourDataset
+CONFLICT	false	 SQ76%{com.jrefinery.data:DefaultStatisticalCategoryDataset-DefaultStatisticalCategoryDataset__[double[][], double[][]]->void	com.jrefinery.data:DefaultStatisticalCategoryDataset-DefaultStatisticalCategoryDataset__[]->void}
+MINE	false	 SQ84%{com.jrefinery.data:DefaultStatisticalCategoryDataset-DefaultStatisticalCategoryDataset__[double[][], double[][]]->void	com.jrefinery.data:DefaultIntervalCategoryDataset-DefaultIntervalCategoryDataset__[double[][], double[][]]->void}
+	P 5N 1	 Rule 53	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+UNFOUND		 SQ80%{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategories__[]->List	com.jrefinery.data:DefaultStatisticalCategoryDataset-getColumnKeys__[]->List}
+CONFLICT	false	 SQ88%{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultStatisticalCategoryDataset-getColumnCount__[]->int}
+MINE	false	 SQ88%{com.jrefinery.data:DefaultStatisticalCategoryDataset-getCategoryCount__[]->int	com.jrefinery.data:DefaultIntervalCategoryDataset-getCategoryCount__[]->int}
+	P 5N 1	 Rule 53	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultIntervalCategoryDataset
+CONFLICT	false	 SQ88%{com.jrefinery.data:DefaultStatisticalCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultStatisticalCategoryDataset-getRowCount__[]->int}
+MINE	false	 SQ77%{com.jrefinery.data:DefaultStatisticalCategoryDataset-getSeriesCount__[]->int	com.jrefinery.data:DefaultContourDataset-getSeriesCount__[]->int}
+	P 3N 0	 Rule 35	x.type=DefaultStatisticalCategoryDataset, new(x).type=DefaultContourDataset
+CONFLICT	true	 SQ75%{com.jrefinery.data:FixedMillisecond-getEnd__[Calendar]->long	com.jrefinery.data:FixedMillisecond-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ75%{com.jrefinery.data:FixedMillisecond-getEnd__[Calendar]->long	com.jrefinery.data:FixedMillisecond-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:FixedMillisecond-getEnd__[]->long	com.jrefinery.data:FixedMillisecond-getLastMillisecond__[]->long}
+MINE	false	 SQ71%{com.jrefinery.data:FixedMillisecond-getEnd__[]->long	com.jrefinery.data:FixedMillisecond-getFirstMillisecond__[]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+UNFOUND		 SQ75%{com.jrefinery.data:GanttSeries-GanttSeries__[String]->void	com.jrefinery.data:TaskSeries-TaskSeries__[String]->void}
+UNFOUND		 SQ40%{com.jrefinery.data:GanttSeries-add__[Object, TimeAllocation]->void	com.jrefinery.data:TaskSeries-add__[Task]->void}
+UNFOUND		 SQ66%{com.jrefinery.data:GanttSeriesCollection-getCategories__[]->List	com.jrefinery.data:TaskSeriesCollection-getColumnKeys__[]->List}
+CONFLICT	false	 SQ75%{com.jrefinery.data:GanttSeriesCollection-getCategoryCount__[]->int	com.jrefinery.data:TaskSeriesCollection-getColumnCount__[]->int}
+MINE	true	 SQ75%{com.jrefinery.data:GanttSeriesCollection-getCategoryCount__[]->int	com.jrefinery.data:TaskSeriesCollection-getRowCount__[]->int}
+	P 1N 0	 Rule 3	x.procedure=getCategoryCount -> new(x).procedure=getRowCount
+	P 8N 1	 Rule 73	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+CONFLICT	false	 SQ69%{com.jrefinery.data:GanttSeriesCollection-getEndValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getEndValue__[int, int, int]->Number}
+MINE	true	 SQ75%{com.jrefinery.data:GanttSeriesCollection-getEndValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getEndValue__[int, int]->Number}
+	P 8N 1	 Rule 73	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 15N 11	 Rule 89	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	false	 SQ69%{com.jrefinery.data:GanttSeriesCollection-getStartValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getStartValue__[Comparable, Comparable]->Number}
+MINE	true	 SQ75%{com.jrefinery.data:GanttSeriesCollection-getStartValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getStartValue__[int, int]->Number}
+	P 8N 1	 Rule 73	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 15N 11	 Rule 89	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	false	 SQ66%{com.jrefinery.data:GanttSeriesCollection-getValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getValue__[Comparable, Comparable]->Number}
+MINE	true	 SQ72%{com.jrefinery.data:GanttSeriesCollection-getValue__[int, Object]->Number	com.jrefinery.data:TaskSeriesCollection-getValue__[int, int]->Number}
+	P 8N 1	 Rule 73	x.type=GanttSeriesCollection, new(x).type=TaskSeriesCollection
+	P 15N 11	 Rule 89	x.parameters=[int, Object]-> new(x).parameters=[int, int]
+CONFLICT	true	 SQ71%{com.jrefinery.data:Hour-getEnd__[Calendar]->long	com.jrefinery.data:Hour-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Hour-getEnd__[Calendar]->long	com.jrefinery.data:Hour-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Millisecond-getEnd__[Calendar]->long	com.jrefinery.data:Millisecond-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Millisecond-getEnd__[Calendar]->long	com.jrefinery.data:Millisecond-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ66%{com.jrefinery.data:Millisecond-getEnd__[]->long	com.jrefinery.data:Millisecond-getLastMillisecond__[]->long}
+MINE	false	 SQ66%{com.jrefinery.data:Millisecond-getEnd__[]->long	com.jrefinery.data:Millisecond-getFirstMillisecond__[]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Minute-getEnd__[Calendar]->long	com.jrefinery.data:Minute-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Minute-getEnd__[Calendar]->long	com.jrefinery.data:Minute-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Month-getEnd__[Calendar]->long	com.jrefinery.data:Month-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Month-getEnd__[Calendar]->long	com.jrefinery.data:Month-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Quarter-getEnd__[Calendar]->long	com.jrefinery.data:Quarter-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Quarter-getEnd__[Calendar]->long	com.jrefinery.data:Quarter-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Second-getEnd__[Calendar]->long	com.jrefinery.data:Second-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Second-getEnd__[Calendar]->long	com.jrefinery.data:Second-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+UNFOUND		 SQ69%{com.jrefinery.data:TimeAllocation-TimeAllocation__[Date, Date]->void	com.jrefinery.data:SimpleTimePeriod-SimpleTimePeriod__[Date, Date]->void}
+CONFLICT	false	 SQ75%{com.jrefinery.data:TimeAllocation-getEnd__[]->Date	com.jrefinery.data:SimpleTimePeriod-getEnd__[]->Date}
+MINE	false	 SQ85%{com.jrefinery.data:TimeAllocation-getEnd__[]->Date	com.jrefinery.data:TimePeriod-getEnd__[]->Date}
+	P 2N 0	 Rule 10	x.type=TimeAllocation, new(x).type=TimePeriod
+CONFLICT	false	 SQ75%{com.jrefinery.data:TimeAllocation-getStart__[]->Date	com.jrefinery.data:SimpleTimePeriod-getStart__[]->Date}
+MINE	false	 SQ85%{com.jrefinery.data:TimeAllocation-getStart__[]->Date	com.jrefinery.data:TimePeriod-getStart__[]->Date}
+	P 2N 0	 Rule 10	x.type=TimeAllocation, new(x).type=TimePeriod
+CONFLICT	false	 SQ66%{com.jrefinery.data:TimePeriod-getEnd__[Calendar]->long	com.jrefinery.data:RegularTimePeriod-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:TimePeriod-getEnd__[Calendar]->long	com.jrefinery.data:TimePeriod-getEnd__[]->Date}
+	P 2N 1	 Rule 31	x.parameters= x.parameters-{[Calendar]}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+	P 4N 6	 Rule 103	x.return=long -> new(x).return=Date
+UNFOUND		 SQ62%{com.jrefinery.data:TimePeriod-getEnd__[TimeZone]->long	com.jrefinery.data:RegularTimePeriod-getLastMillisecond__[]->long}
+UNFOUND		 SQ66%{com.jrefinery.data:TimePeriod-getMiddle__[Calendar]->long	com.jrefinery.data:RegularTimePeriod-getMiddleMillisecond__[Calendar]->long}
+UNFOUND		 SQ70%{com.jrefinery.data:TimePeriod-getMiddle__[TimeZone]->long	com.jrefinery.data:RegularTimePeriod-getMiddleMillisecond__[TimeZone]->long}
+UNFOUND		 SQ62%{com.jrefinery.data:TimePeriod-getMiddle__[]->long	com.jrefinery.data:RegularTimePeriod-getMiddleMillisecond__[]->long}
+CONFLICT	false	 SQ66%{com.jrefinery.data:TimePeriod-getStart__[Calendar]->long	com.jrefinery.data:RegularTimePeriod-getFirstMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:TimePeriod-getStart__[Calendar]->long	com.jrefinery.data:TimePeriod-getStart__[]->Date}
+	P 2N 1	 Rule 31	x.parameters= x.parameters-{[Calendar]}
+	P 12N 3	 Rule 86	x.procedure=getStart -> new(x).procedure=getFirstMillisecond
+	P 4N 6	 Rule 103	x.return=long -> new(x).return=Date
+UNFOUND		 SQ70%{com.jrefinery.data:TimePeriod-getStart__[TimeZone]->long	com.jrefinery.data:RegularTimePeriod-getFirstMillisecond__[TimeZone]->long}
+CONFLICT	true	 SQ71%{com.jrefinery.data:Week-getEnd__[Calendar]->long	com.jrefinery.data:Week-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Week-getEnd__[Calendar]->long	com.jrefinery.data:Week-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+CONFLICT	true	 SQ71%{com.jrefinery.data:Year-getEnd__[Calendar]->long	com.jrefinery.data:Year-getLastMillisecond__[Calendar]->long}
+MINE	false	 SQ71%{com.jrefinery.data:Year-getEnd__[Calendar]->long	com.jrefinery.data:Year-getFirstMillisecond__[Calendar]->long}
+	P 12N 3	 Rule 95	x.procedure=getEnd -> new(x).procedure=getFirstMillisecond
+conflict_true:	30
+conflict_false:	12
+unfound:	59
+rename	266
+move	88
+param	681
+rename_package	0
+rename_class	10
+rename_interface	0
+rename_method	216
+rename_constructor	40
+rename_field	0
+move_class	67
+move_interface	3
+move_method	18
+move_field	0
+param_change_identifier	118
+param_renameormove_paramtype	101
+param_remove_parameter	203
+param_add_parameter	233
+param_change_paramtype	26

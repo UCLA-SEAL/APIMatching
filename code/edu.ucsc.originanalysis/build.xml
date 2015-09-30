@@ -1,0 +1,36 @@
+<project name="origin" default="compile" basedir=".">
+	<description>
+        Origin Anaysis
+    </description>
+
+	<!-- Directories -->
+	<property name="src.dir" value="src" />
+	<property name="lib.dir" value="lib" />
+	<property name="dist.dir" value="dist" />
+	<property name="build.dir" value="build" />
+	<property environment="env"/>
+
+	<!-- ClassPath -->
+	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement path="${build.dir}" />
+	</path>
+
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}">
+				<include name="*.properties" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac destdir="${build.dir}" debug="on" deprecation="on">
+			<src path="${src.dir}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+</project>
